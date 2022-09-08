@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>lesson_3</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#setup">SETUP</a></li>
+                <li><a href="#document_outline">THE DOCUMENT OUTLINE</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#sections">Sections</a></li>
+                <li><a href="#nav_elements">Nav elements</a></li>
+                <li><a href="#headers">Headers</a></li>
+                <li><a href="#footer">Footers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="opening_article">
+            <h1 class="title"><mark>Semantic</mark> html</h1>
+            <p><strong>Semantic HTML”</strong> refers to the idea that all your HTML markup should convey the underlying
+                meaning of your
+                content—not its appearance. We&#39;ve already been writing semantic HTML, but there&#39;s a whole set of
+                elements designed for the sole purpose of adding more meaning to
+                the overall layout of a web page.</p>
+            <p>They&#39;re called “sectioning elements”, and they look something
+                like this:</p>
+            <img src="img/sectioning_elements.png" alt="image of sectioning elements" />
+        </div>
+        <div class="article_section">
+            <h2 class="sub-titile" id="setup">Setup</h2>
+            <p>Our example for this chapter will be a simple unstyled HTML document. Create a new Atom project called
+                semantic-html with a new file in it called article.html. Add the following:</p>
+            <img src="img/code-snippet.png" alt="code snippet" />
+            <p class="text">That &lt;h1&gt; and &lt;ul&gt; are presumably the top-level banner for our website—not the
+                main
+                content
+                of the web page.
+                We&#39;ve never had to make this distinction before, but that&#39;s what this whole chapter is about.
+            </p>
+        </div>
+        <div class="article_section">
+            <h2 class="sub-titile" id="document_outline">The document outline</h2>
+            <p>Every HTML document has an “outline,” which is how search engines and screen readers view the hierarchy
+                of the content on the page. The &lt;h1&gt; through &lt;h6&gt; heading elements all contribute to a
+                page&#39;s document outline. Let&#39;s
+                check it out by adding a dummy blog post to our article.html file:</p>
+            <img src="img/article-example.png" alt="article example page">
+            <p>The HTML5 Outliner is a convenient tool for inspecting the document outline of a page. Go ahead and paste
+                the entirety of article.html into the text field at the bottom. You should see the outline for our
+                example, which currently has the following structure. It&#39;s a little reminiscent of the research
+                paper
+                outlines you learned to make in elementary school.</p>
+            <img src="img/structure_outline.png" alt="structure outline">
+            <p>Each &lt;h1&gt; element creates a new section in the document outline, and any less prominent headings
+                that
+                follow it are considered subsections under that top-level heading. E.g., the Semantic HTML section has
+                two
+                subsections in it: The Document Outline and Inline Semantic HTML. The same goes for &lt;h2&gt; and
+                &lt;h3&gt; elements, and so on down to &lt;h6&gt;.</p>
+        </div>
+        <div class="article_section">
+            <h2 class="sub-titile" id="articles">Articles</h2>
+            <p>The &lt;article&gt element represents an independent article in a web page. It should only wrap content
+                that can be
+                plucked out of your page and distributed in a completely different context. For instance, an app like
+                Flipboard should be able to grab an &lt;article&gt; element from your site, display it in its own app,
+                and
+                have it make perfect sense to its readers.</p>
+            <img src="img/articles.png" alt="articles content logical division">
+            <p>In our example, we can use &lt;article&gt; to mark the main content of the page as a self-contained unit,
+                like so:</p>
+            <img src="img/code-snippet2.png" alt="article code snippet" />
+            <p>Notice how we left the copyright notice outside the
+            <article> element because it&#39;s a footer for the entire site—not specifically for our article. As we’ll
+                discover shortly, &lt;article&gt;&#39;s are essentially mini web pages in your HTML document. They have
+                their own
+                headers, footers, and document outline that are completely isolated from the rest of your site.</p>
+        </div>
+        <p>Deeper into sections</p>
+        <div class="article_section">
+            <h2 class="sub-title" id="sections">Sections</h2>
+            <p>The
+            <section> element is sort of like an &lt;article&gt;, except it doesn’t need to make sense outside the
+                context of
+                the document. That is, an app like Flipboard wouldn’t try to pull out all the &lt;section&gt;&#39;s of
+                your
+                page and present them as independent pieces of content.</p>
+                <img src="img/section_tag_element.png" alt="section tag element" />
+                <p class="text sections">Think of
+                    &lt;section&gt; as an explicit way to define the sections in a document outline. Why would we want
+                    this
+                    instead of letting the heading levels do it for us? Often times, you need a container to wrap a
+                    section for layout purposes, and it makes sense to use the more descriptive &lt;section&gt; element
+                    over a
+                    generic &lt;div&gt;.</p>
+        </div>
+        <div class="article_section">
+            <h2 class="sub-title" id="nav_elements">Nav elements</h2>
+            <p>The &lt;nav&gt; element lets you mark up the various navigation sections of your website. This goes for
+                the main site
+                navigation, links to related pages in a sidebar, tables of content, and pretty much any group of links.
+                For example, we should stick our site-wide navigation menu in a &lt;nav&gt; element</p>
+            <p class="text">This is a great piece of semantic information for search engines. It helps them quickly
+                identify the
+                structure of your entire website, making it easier to discover other pages. As we&#39;ll see in
+                Asides,
+                it&#39;s possible to include multiple &lt;nav&gt; elements on a single page if you have different
+                sets of related links</p>
+            <img src="img/navigation_tag.png" alt="nav tag appearance on web site">
+        </div>
+        <div>
+            <h2 class="sub-title" id="headers">Headers</h2>
+            <p>The
+            <header> element is a new piece of semantic markup, not to be confused with headings (the
+                &lt;h1&gt-&lt;h6&gt;
+                elements). It denotes introductory content for a section, article, or entire web page.
+                “Introductory content” can be anything from your company&#39;s logo to navigational aids or
+                author
+                information.</p>
+                <img src="img/header_tag.png" alt="header tag appearance on web site">
+                <p>Headers are only associated with the nearest sectioning element—typically a
+                    &lt;body&gt;, &lt;section&gt;, or &lt;article&gt; element. This means that you can use multiple
+                    &lt;header&gt; elements to
+                    add introductory content to different parts of a document. For instance, the title,
+                    author, and publication date of our &lt;article&gt; is a pretty good candidate for another
+                    &lt;header&gt;:
+                </p>
+                <img src="img/code-snippet3.png" alt="heade code snippet" />
+                <p>Without this &lt;header&gt;, search engines and screen readers wouldn’t know that first
+                    &lt;p&gt; was separate from the main
+                    content of the article. Like
+                    &lt;section&gt;, it also serves as a convenient CSS hook, since the title and author info for a
+                    blog post
+                    are often styled differently than the rest of the article. Again, think of &lt;header&gt; as a
+                    more
+                    semantic alternative to a &lt;div&gt; container.</p>
+        </div>
+        <div>
+            <h2 id="footer">Footers</h2>
+            <p>Conceptually, footers are basically the same as headers, except they generally come at end of an
+                article/website opposed to the beginning. Common use cases include things like copyright notices, footer
+                navigation, and author bios at the end of blog posts.</p>
+            <img src="img/footer_tag.png" alt="footer tag appearance on web site">
+        </div>
+    </main>
+    <footer>
+        <div class="reference">
+            <h4>all of the information was found on the following resource:</h4>
+            <a
+                href="https://www.internetingishard.com/html-and-css/semantic-html/#the-document-outline">internetingishard</a>
+        </div>
+    </footer>
+</body>
+
+</html>

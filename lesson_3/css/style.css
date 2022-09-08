@@ -1,0 +1,37 @@
+html {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+img {
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.title {
+    color: rgb(28, 169, 143);
+}
+
+.opening_article>p {
+    color: rgb(13, 86, 72);
+}
+
+.article_section~p {
+    color: rgb(216, 149, 25);
+}
+
+.sub-title {
+    color: rgb(25, 201, 16);
+}
+
+.text.sections {
+    color: rgb(229, 134, 46);
+}
+
+.text {
+    color: rgb(180, 20, 169);
+}
+
+.reference * {
+    color: red;
+}
