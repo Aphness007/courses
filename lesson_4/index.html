@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nullstyles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="head">
+        <nav class="head__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item item"><a href="#what_is_bem">What is BEM?</a></li>
+                <li class="nav__item item"><a href="#how_to_implement_bem">How to implement BEM</a></li>
+                <li class="nav__item item"><a href="">Two recommended approaches for modifiers: One option on a block
+                        level, another on an element level</a></li>
+                <li class="nav__item item"><a href="">Avoid managing the state with modifiers.</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="main">
+            <section class="main__head">
+                <h1 class="main__head-title title">Creating clean CSS with BEM methodology</h1>
+            </section>
+            <section class="main__subtitle">
+                <h2 id="what_is_bem" class="main__sub_title title">What is BEM?</h2>
+                <p class="text">BEM is a front-end naming method for organizing and naming CSS classes. The Block,
+                    Element, Modifier methodology is a popular naming convention for class names in HTML and CSS. It
+                    helps to write clean CSS by following some simple rules.</p>
+                <p class="text">Projects of any size with CSS can benefit from a <span>BEM</span> framework—unless
+                    writing styles directly inside already organized JavaScript files and using Styled Components or
+                    something similar.
+                    To complement <span>BEM</span>, include some parts of SMACSS which act as a style guide for naming
+                    conventions.
+                    <span>BEM</span> is easy to read and organizes styles, even when projects are extremely
+                    large.
+                </p>
+                <p class="text">Class naming has never been an easy part of CSS. It&aposs challenging for outside
+                    developers
+                    to
+                    understand what developer-specified classes do. Naming conventions can quickly get out of control
+                    when refactoring code more than once and when working with a team.</p>
+                <h3>Some of the most irritating problems related to naming in CSS when:</h3>
+                <ul>
+                    <li class="li">Overriding classes accidentally.</li>
+                    <li class="li">Hard to read both CSS and HTML has no clear scoping and structure in naming.</li>
+                    <li class="li">New team members waste time learning about or trying to find already created classes.
+                    </li>
+                    <li class="li">The code is hard to update because it&#39;s not clear what aspects are global and
+                        what belongs
+                        to the local component.</li>
+                    <li class="li">It&#39;s unclear how to handle nesting (i.e., what to add or keep?).</li>
+                </ul>
+                <p class="text last-p">Most problems come from poor naming and lack of scope (aka the scope that closes
+                    the
+                    context). For example, when reading the code of the menu developers should feel confident that the
+                    code does not include any styles of the headings. In this article, I&#39;ll go over what BEM is, how
+                    it works, and recommendations on how to implement <span>BEM</span> successfully.</p>
+            </section>
+            <section class="main__subtitle">
+                <h2 id="how_to_implement_bem" class="main__sub-title title-2">How to implement BEM</h2>
+                <h3>There are three main parts of BEM.</h3>
+                <ul>
+                    <li>Block which holds everything (elements) inside and acts as a scope.</li>
+                    <li>Element which acts as a specific part of the component.</li>
+                    <li>Modifier which adds additional styles to a specific element(s).</li>
+                </ul>
+            </section>
+            <section class="main__subtitle">
+                <h2></h2>
+            </section>
+        </article>
+        <p> </p>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
