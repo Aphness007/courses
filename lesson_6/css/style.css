@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Passions+Conflict&display=swap');
+
+body {
+    font-family: Lato, serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #424551;
+}
+
+.header__container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px 100px 20px;
+    background-color: rgba(253, 156, 156, 0.5);
+    border: 1px solid transparent;
+    box-shadow: inset 0px 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.header__logo {
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 3px 3px 3px #000;
+    width: 80px;
+    height: 80px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border-top: 4px solid rgb(14, 45, 132);
+    border-right: 4px dotted rgb(40, 208, 160);
+    border-left: 4px solid rgb(193, 19, 19);
+    background: rgba(12, 81, 12, 0.5);
+    padding-top: 20px;
+    margin-bottom: 15px;
+    box-shadow: 5px 7px rgb(5, 9, 143);
+    transition: all 0.3s ease 0s;
+}
+
+.header__logo:hover {
+    box-shadow: 2px 3px black;
+}
+
+.header__logo:focus {
+    background-color: white;
+}
+
+.head-section__nav {
+    margin: 0 0 0 auto;
+    max-width: 500px;
+}
+
+.head-section__nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+li:first-child {
+    font-family: 'Passions Conflict', serif;
+    font-size: 30px;
+    margin-left: 0px;
+
+}
+
+li:first-child::first-letter {
+    color: rgb(15, 162, 215);
+}
+
+.head-section__nav li:hover {
+    outline: 6px solid rgb(5, 9, 143);
+    border-radius: 20%;
+    background-color: rgb(146, 28, 130);
+    color: white;
+}
+
+.section-1 .section-1__disclamer {
+    color: rgb(30, 219, 223);
+    width: 1000px;
+    height: 300px;
+    background-color: rgba(253, 156, 156, 0.5);
+    margin: -200px auto;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 19px 38px, rgba(0, 0, 0, 0.5) 10px 10px 15px 12px;
+    margin-bottom: 40px;
+}
+
+.disclamer__title {
+    font-family: 'Passions Conflict', serif;
+    text-shadow: 5px 8px 8px rgb(71, 25, 224);
+    color: rgb(236, 134, 231);
+    font-weight: 900;
+    font-size: 50px;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+
+.disclamer__text {
+    max-height: 100px;
+    overflow: auto;
+}
+
+.disclamer__title-2 {
+    font-family: Lato, serif;
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 60px;
+    color: #1E212C;
+    text-align: left;
+    margin-bottom: 40px;
+
+}
+
+.section-2 {
+    max-width: 810px;
+    margin: 0 auto;
+}
+
+.section-2 img {
+    margin-bottom: 60px;
+
+}
+
+.section-2 .text-bold,
+.disclamer__text-2 {
+    color: #1E212C;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-2>div {
+    font-family: inherit;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+div .disclamer__text-2 {
+    margin: 48px 0px 58px 48px;
+}
+
+.footer__row {
+    background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+}
+
+footer .footer__backgr {
+    background-color: rgba(253, 156, 156, 0.5);
+
+}
+
+footer .footer__item {
+    text-align: center;
+    padding: 10px 0px 10px;
+
+
+}
+
+.footer__button {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.footer__item2 {
+
+    width: 180px;
+    height: 50px;
+    color: white;
+    padding: 15px 5px;
+    background-color: black;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto;
+    line-height: 1.2;
+    font-weight: 700;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease 0.2s;
+}
+
+.footer__button:hover {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.footer {
+    background: url('../img/02.jpeg') no-repeat center bottom;
+    background-size: cover;
+}
