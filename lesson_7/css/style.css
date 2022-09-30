@@ -10,6 +10,7 @@ body {
     font-family: Lato, serif;
     font-size: 16px;
     font-weight: 400;
+    color: #424551;
 }
 
 .header {
@@ -49,12 +50,10 @@ body {
 }
 
 .main__remark {
-    color: #424551;
     margin-right: 12px;
 }
 
 span {
-    color: #424551;
     margin-right: 12px;
 }
 
@@ -75,10 +74,23 @@ span {
 }
 
 .main .main__image {
-    width: 810px;
+    max-width: 100%;
     height: 360px;
     background-image: url('../img/image.jpeg');
     margin-bottom: 60px;
+}
+
+
+.main__text {
+    line-height: 1.6;
+    color: #424551;
+    margin-bottom: 40px;
+}
+
+.main__title,
+.main__text-bold,
+.main__quoate {
+    color: #000;
 }
 
 .main .main__text-bold {
@@ -88,38 +100,35 @@ span {
     margin-bottom: 24px;
 }
 
-main .main__container {
-    padding: 0px;
-}
-
-.text {
-    line-height: 1.6;
-    color: #424551;
-    margin-bottom: 40px;
-}
-
-.text:last-child {
+.main .main__quoate {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
     margin-bottom: 48px;
-}
-
-.main__text-bold.bold {
+    background: url('../img/braces.jpg') top left no-repeat;
     padding-left: 58px;
-    margin-bottom: 48px;
 }
 
-ul.list {
+.main__text {
+    line-height: 1.6;
+}
+
+.main__text p {
+    margin-bottom: 22px;
+}
+
+.main__text ul {
     margin-bottom: 24px;
 }
 
-li.list__item {
-    line-height: 1.6;
-    color: #424551;
+.main__text li {
     margin-bottom: 4px;
-    padding-left: 36px;
+    padding-left: 32px;
+    min-height: 30px;
+    background: url('../img/check.svg') 0 6px no-repeat;
 }
 
 .main__section1 {
-    min-height: 452px;
     background: #F4F5F7;
     margin-bottom: 48px;
 }
