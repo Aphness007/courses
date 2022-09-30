@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+[class*="__container"] {
+    max-width: 810px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Lato, serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header {
+    height: 90px;
+    margin-bottom: 80px;
+    background-color: #D07334;
+}
+
+.header__logo {
+    /*how to align text in the center of logo?*/
+    padding-top: 14px;
+    text-align: center;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to bottom, #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%);
+    border-radius: 50%;
+    margin-right: 40%;
+}
+
+.header .header__list-options {
+    /*how to align text vertically with logo?*/
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 60px;
+}
+
+.header .header__button {
+    width: 206px;
+    height: 52px;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+}
+
+.main__remark,
+.main__remark-2 {
+    display: inline-block;
+}
+
+.main__remark {
+    color: #424551;
+    margin-right: 12px;
+}
+
+span {
+    color: #424551;
+    margin-right: 12px;
+}
+
+.main__remark-2 {
+    color: #FF3F3A;
+    font-weight: 700;
+}
+
+.main__sub-remark {
+    margin-bottom: 12px;
+}
+
+.main .main__title {
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+.main .main__image {
+    width: 810px;
+    height: 360px;
+    background-image: url('../img/image.jpeg');
+    margin-bottom: 60px;
+}
+
+.main .main__text-bold {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+main .main__container {
+    padding: 0px;
+}
+
+.text {
+    line-height: 1.6;
+    color: #424551;
+    margin-bottom: 40px;
+}
+
+.text:last-child {
+    margin-bottom: 48px;
+}
+
+.main__text-bold.bold {
+    padding-left: 58px;
+    margin-bottom: 48px;
+}
+
+ul.list {
+    margin-bottom: 24px;
+}
+
+li.list__item {
+    line-height: 1.6;
+    color: #424551;
+    margin-bottom: 4px;
+    padding-left: 36px;
+}
+
+.main__section1 {
+    min-height: 452px;
+    background: #F4F5F7;
+    margin-bottom: 48px;
+}
+
+.main__section1 .image__svg {
+    display: inline-block;
+    margin-right: 100px;
+    width: 250px;
+    height: 250px;
+    background: url('../img/illustration.svg') right / cover no-repeat;
+}
+
+.text-block {
+    color: rgb(235, 166, 166);
+    text-decoration: dashed;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 10px;
+    border-right: 3px solid orangered;
+    border-bottom: 3px dashed rgb(27, 79, 27);
+    background-color: #e66633;
+    display: inline-block;
+    transition: all 0.3 ease 0.1s;
+}
+
+.text-block:hover {
+    color: rgb(163, 222, 163);
+    text-transform: uppercase;
+    opacity: 0.5;
+    background-color: green;
+    text-shadow: 3px 3px 3px 3px #424551;
+
+}
+
+.main__section2 {
+    width: 100%;
+    height: 900px;
+    background: url('https://raw.githubusercontent.com/Aphness007/stage1-tasks/assets/images/morning/01.jpg') center top no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background: url('https://raw.githubusercontent.com/Aphness007/stage1-tasks/assets/images/morning/01.jpg') center bottom / cover no-repeat;
+    opacity: 0.7;
+}
+
+
+footer .text {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: red;
+}
