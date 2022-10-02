@@ -125,6 +125,7 @@ span {
     margin-bottom: 4px;
     padding-left: 32px;
     min-height: 30px;
+    /*very important!*/
     background: url('../img/check.svg') 0 6px no-repeat;
 }
 
