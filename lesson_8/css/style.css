@@ -246,69 +246,80 @@ ul li:hover ul {
 }
 
 .main__context-game {
+    max-width: 1000px;
     height: 600px;
-    border: 1px solid orange;
+    border: 1px solid #66b6d2;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 8px #165a72, 2px 2px 8px #66b6d2;
+    margin: 0 auto;
     padding: 30px;
-    background: linear-gradient(to bottom, #a7cfdf 0%, #23538a 100%);
+    background: #a8d5e5;
 }
-
 
 
 .game-path1,
-.game-path6 {
+.game-path7 {
     text-transform: uppercase;
     color: orange;
-    background: blueviolet;
-    width: 50px;
-    height: 25px;
+    border-radius: 25px;
+    background: #1e7898;
+    width: 80px;
+    height: 45px;
+    box-shadow: inset 5px 5px 5px black, 5px 5px 5px black;
+    padding-top: 12px;
+    text-align: center;
 }
 
-.game-path6 {
-    margin-left: 560px;
-    margin-top: -2px;
+.game-path7 {
+    margin-left: 550px;
 }
 
 .game-path2 {
-    display: inline-block;
-    background: rgb(28, 15, 172);
+    background: url('../img/Star.svg') repeat, #134b5f;
     height: 240px;
+    margin-left: 20px;
     width: 40px;
     visibility: hidden;
 }
 
 .game-path3 {
-    display: inline-block;
-    background: rgb(16, 141, 190);
+    background: #134b5f;
     height: 30px;
     width: 300px;
-    margin-left: -2px;
+    margin-left: 20px;
     visibility: hidden;
 }
 
 .game-path4 {
-    display: block;
-    background: rgb(115, 54, 148);
-    height: 225px;
-    width: 40px;
-    margin-top: -6px;
-    margin-left: 300px;
+    background: #134b5f;
+    height: 25px;
+    width: 15px;
+    margin-left: 305px;
     visibility: hidden;
 }
 
 .game-path5 {
-    background: rgb(98, 7, 147);
-    height: 35px;
-    display: inline-block;
+    background: #134b5f;
+    height: 25px;
     width: 300px;
-    margin-top: -4px;
-    margin-left: 300px;
+    margin-left: 305px;
+    visibility: hidden;
+}
+
+.game-path6 {
+    background: #134b5f;
+    height: 85px;
+    width: 30px;
+    margin-left: 575px;
     visibility: hidden;
 }
 
 .game-path1:hover,
-.game-path1:hover+div {
+.game-path1:hover+.game-path2 {
     visibility: visible;
+    text-shadow: 2px 2px 2px rgb(54, 19, 73);
 }
+
 
 .game-path2:hover,
 .game-path2:hover+div {
@@ -321,6 +332,20 @@ ul li:hover ul {
 }
 
 .game-path4:hover,
-.game-path4:hover+div {
+.game-path4:hover+.game-path5 {
     visibility: visible;
+}
+
+.game-path5:hover,
+.game-path5:hover+.game-path6 {
+    visibility: visible;
+}
+
+ul li:nth-child(odd) {
+    color: rgb(46, 114, 177);
+
+}
+
+ul li:nth-child(even) {
+    color: rgb(65, 3, 99);
 }
