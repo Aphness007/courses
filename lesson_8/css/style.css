@@ -249,7 +249,7 @@ ul li:hover ul {
     max-width: 1000px;
     height: 600px;
     border: 1px solid #66b6d2;
-    border-radius: 15px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: inset 2px 2px 8px #165a72, 2px 2px 8px #66b6d2;
     margin: 0 auto;
     padding: 30px;
