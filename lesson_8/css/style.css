@@ -52,11 +52,12 @@ body {
     margin-bottom: 40px;
 }
 
+
 .main__context ul li:not(:last-child) {
     margin-bottom: 4px;
 }
 
-ul li {
+ul li:not(:last-child) {
     margin-bottom: 4px;
 }
 
@@ -121,7 +122,7 @@ ul li:hover ul {
     margin-bottom: 8px;
 }
 
-.main__context-2 ul li:first-of-type::before {
+.main__context-2 ul li.star::before {
     display: inline-block;
     content: '';
     margin-right: 8px;
@@ -130,7 +131,7 @@ ul li:hover ul {
     height: 16px;
 }
 
-.main__context-2 ul li:nth-child(2):before {
+.main__context-2 ul li.play::before {
     display: inline-block;
     content: '';
     margin-right: 8px;
@@ -139,7 +140,7 @@ ul li:hover ul {
     height: 16px;
 }
 
-.main__context-2 ul li:nth-child(3):before {
+.main__context-2 ul li.person::before {
     display: inline-block;
     content: '';
     margin-right: 8px;
@@ -338,6 +339,10 @@ ul li:hover ul {
 
 .game-path5:hover,
 .game-path5:hover+.game-path6 {
+    visibility: visible;
+}
+
+.game-path6:hover {
     visibility: visible;
 }
 
