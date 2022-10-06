@@ -109,6 +109,7 @@ span {
     padding-left: 58px;
 }
 
+/* 
 .main__text {
     line-height: 1.6;
 }
@@ -119,12 +120,12 @@ span {
 
 .main__text ul {
     margin-bottom: 24px;
-}
+} */
 
 .main__text li {
     margin-bottom: 4px;
     padding-left: 32px;
-    min-height: 30px;
+    /* min-height: 30px; */
     /*very important!*/
     background: url('../img/check.svg') 0 6px no-repeat;
 }
