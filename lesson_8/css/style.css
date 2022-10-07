@@ -582,8 +582,13 @@ img.icon-icon {
     position: absolute;
     z-index: 10;
     text-shadow: 2px 2px 2px #000;
+    overflow: hidden;
 }
 
+.section3 .sec__card h2:hover {
+    transition: all 0.5s ease 0s;
+    transform: scale(1.5);
+}
 
 .section3 .sec__card::before {
     position: absolute;
