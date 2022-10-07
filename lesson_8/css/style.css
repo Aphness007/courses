@@ -416,22 +416,18 @@ ul li:nth-child(even) {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid transparent;
+    border: 8px solid transparent;
     border-image: linear-gradient(95deg, #ff0, #f0f, #f00, #00f, #0f0);
     border-image-slice: 1;
-    background: linear-gradient(-75deg, #ddd152, lightskyblue);
+    background: linear-gradient(-55deg, #ddd152, lightskyblue);
     background-size: 400%;
-
-    ;
-
-    /* transform: translate(-50%, -50%); */
 }
 
 
 .card {
     position: relative;
     width: 400px;
-    height: 400px;
+    height: 500px;
     background: rgb(41, 41, 243);
     margin: 40px;
     border-radius: 40px;
@@ -532,4 +528,98 @@ img.icon-icon {
     text-transform: uppercase;
     font-weight: 900;
     color: yellowgreen;
+}
+
+.section3 {
+    background: linear-gradient(25deg, red, black);
+    margin-bottom: 40px;
+    background-size: 150px;
+}
+
+.section3 .section__row {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .sec__card {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgb(50, 26, 45);
+    border-radius: 20px;
+    margin: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.section3 .sec__card:nth-child(1):hover {
+    border-bottom-left-radius: 100px;
+}
+
+.section3 .sec__card:nth-child(2):hover {
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.section3 .sec__card:nth-child(3):hover {
+    border-bottom-right-radius: 100px;
+
+}
+
+
+.section3 .sec__card h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 46px;
+    color: white;
+    position: absolute;
+    z-index: 10;
+    text-shadow: 2px 2px 2px #000;
+}
+
+
+.section3 .sec__card::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 120%;
+    background: linear-gradient(40deg, #f00, #f0f, #ff0, #0f0);
+    animation: animate 4s linear infinite;
+}
+
+.section3 .sec__card:nth-child(2)::after {
+    border-bottom-right-radius: 100px;
+}
+
+.section3 .sec__card:nth-child(3)::after {
+    border-radius: 20px;
+    border-bottom-right-radius: 100px;
+
+}
+
+.section3 .sec__card::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(25deg, red, rgb(57, 28, 246));
+    inset: 4px;
+    border-radius: 16px;
+    border-bottom-left-radius: 100px;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
