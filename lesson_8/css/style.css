@@ -82,6 +82,7 @@ ul li ul {
     width: 16px;
     height: 16px;
     margin-right: 16px;
+    margin-left: -32px;
 }
 
 .main__context ul li:hover::before {
