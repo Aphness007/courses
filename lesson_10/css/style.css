@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+[class*="__container"] {
+    max-width: 850px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Lato, serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #424551;
+
+}
+
+.title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 1.3;
+    align-items: center;
+    color: #1E212C;
+}
+
+.main__title:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.main__image:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.main__article {
+    margin-bottom: 60px;
+}
+
+.main__text.bold {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #1E212C;
+}
+
+.main__text.bold:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.main__text {
+    line-height: 1.6;
+}
+
+.main__text:not(:last-child) {
+    margin-bottom: 94px;
+}
+
+.main__text p:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.main__quoate {
+    background: url('../img/braces.jpg') top left no-repeat;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #1E212C;
+    padding-left: 58px;
+
+}
+
+.main__quoate:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+ul.main__text:not(:last-child) {
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+ul.main__text li::before {
+    display: inline-block;
+    content: '';
+    background: url('../img/check.svg') 0 1px no-repeat;
+    line-height: 1.8;
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+    margin-left: -32px;
+}
+
+.main__text li {
+    padding-left: 32px;
+    line-height: 1.6;
+}
+
+.main__text ul li:hover::before {
+    transition: all 0.5s ease 0s;
+    transform: rotate(-360deg);
+}
+
+.main__text li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.createx__container {
+    max-width: 1270px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+
+.createx__item {}
+
+.createx__about--createx {
+    display: flex;
+    margin-bottom: 180px;
+}
+
+.createx__columns {
+    margin-left: 134px;
+}
+
+.item {}
+
+.item__image {
+    background: url('../img/image2.jpg') 0 0 no-repeat;
+    width: 705px;
+    height: 560px;
+    background-size: cover;
+}
+
+.subtitle {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1E212C;
+}
+
+.item__subtitle:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.item__title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 1.3;
+    color: #1E212C;
+}
+
+.item__title:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.item__list li {
+    line-height: 1.6;
+    margin-left: 32px;
+}
+
+.item__list li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.item__list li::before {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url('../img/check.svg') 0 2px no-repeat;
+    margin-left: -32px;
+    margin-right: 16px;
+}
+
+.item__list li:hover::before {
+    transition: all 0.5s ease 0s;
+    transform: rotate(360deg);
+}
+
+.item__list:not(:last-child) {
+    margin-bottom: 48px;
+}
+
+.item__button {
+    width: 161px;
+    height: 44px;
+    color: white;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+}
+
+.button {
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    line-height: 44px;
+}
+
+/* courses */
+.createx-courses__courses {
+    margin-bottom: 180px;
+}
+
+.createx-courses__subtitle {
+    margin-bottom: 8px;
+}
+
+
+.createx-courses__body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.createx-courses__button {
+    width: 202px;
+    height: 52px;
+    color: #FF3F3A;
+    background: white;
+    border: 1px solid #FF3F3A;
+
+}
+
+.createx-courses__course--list {}
+
+.createx-courses__box {}
+
+.box {}
+
+.box__body {
+    display: flex;
+    gap: 30px;
+}
+
+.box__item {
+    display: flex;
+    gap: 30px;
+}
+
+.box__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.box__card {
+    display: flex;
+    border: 1px solid #E5E8ED;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    width: 600px;
+}
+
+
+.card__image {
+    width: 214px;
+    height: 214px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+
+.image-card--1 {
+    background: url('../img/card1.jpg') no-repeat;
+
+}
+
+.image-card--2 {
+    background: url('../img/card2.jpg') no-repeat;
+
+}
+
+.image-card--3 {
+    background: url('../img/card3.jpg') no-repeat;
+
+}
+
+.image-card--4 {
+    background: url('../img/card4.jpg') no-repeat;
+
+}
+
+.image-card--5 {
+    background: url('../img/card5.jpg') no-repeat;
+
+}
+
+.image-card--6 {
+    background: url('../img/card6.jpg') no-repeat;
+}
+
+.card__content {
+    margin: 32px 0px 0px 32px;
+}
+
+.card__flag {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: white;
+    margin-bottom: 20px;
+    padding-left: 8px;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #1E212C;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: red;
+}
+
+.author {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #787A80;
+}
+
+.flag--green {
+    width: 79px;
+    height: 23px;
+    background: #03CEA4;
+    border-radius: 4px;
+}
+
+.flag--orange {
+    width: 112px;
+    height: 23px;
+    background: #F89828;
+    border-radius: 4px;
+}
+
+.flag--blue {
+    width: 97px;
+    height: 23px;
+    background: #5A87FC;
+    border-radius: 4px;
+}
+
+.flag--pink {
+    width: 59px;
+    height: 23px;
+    background: #F52F6E;
+    border-radius: 4px;
+}
+
+.createx-benefits__body {}
+
+.createx-benefits__subtitle {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {}
+
+.createx-benefits__title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {}
+
+.createx-benefits__tabs {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.createx-benefits__tab {}
+
+
+.tab {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #9A9CA5;
+    width: 307px;
+    height: 46px;
+    padding-top: 8px;
+}
+
+.tab.active {
+    color: #FF3F3A;
+    border: 1px solid #FF3F3A;
+    border-radius: 5px;
+}
+
+.tutors--tab::before {
+    display: inline-block;
+    content: '';
+    background: url('../img/Star.svg') 0 1px no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+}
+
+.feedback--tab::before {
+    display: inline-block;
+    content: '';
+    background: url('../img/like.svg') 0 1px no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.library--tab::before {
+    display: inline-block;
+    content: '';
+    background: url('../img/Layouts.svg') 0 1px no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.community--tab::before {
+    display: inline-block;
+    content: '';
+    background: url('../img/Vector.svg') 0 1px no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.createx-benefits__info {}
+
+.createx-benefits__block {
+    display: flex;
+}
+
+.createx-benefits__context {
+    margin-top: 122px;
+    width: 495px;
+}
+
+.createx-benefits__sub-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.3;
+    color: #1E212C;
+    margin-bottom: 24px;
+
+}
+
+.createx-benefits__text {
+    line-height: 1.6;
+    color: #424551;
+}
+
+.createx-benefits__image {}
+
+.createx-benefits__benefits-image {
+    background: url('../img/illustration.svg');
+    width: 600px;
+    height: 440px;
+}
