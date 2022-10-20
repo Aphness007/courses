@@ -453,4 +453,5 @@ ul.main__text li::before {
     background: url('../img/illustration.svg');
     width: 600px;
     height: 440px;
+    margin-left: 135px;
 }
