@@ -111,12 +111,12 @@ ul.main__text li::before {
 
 .createx__item {}
 
-.createx__about--createx {
+.createx__about {
     display: flex;
     margin-bottom: 180px;
 }
 
-.createx__columns {
+.item__columns {
     margin-left: 134px;
 }
 
@@ -194,22 +194,22 @@ ul.main__text li::before {
 }
 
 /* courses */
-.createx-courses__courses {
+.createx__courses {
     margin-bottom: 180px;
 }
 
-.createx-courses__subtitle {
+.createx__subtitle {
     margin-bottom: 8px;
 }
 
 
-.createx-courses__body {
+.createx__body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
 }
 
-.createx-courses__button {
+.createx__button {
     width: 202px;
     height: 52px;
     color: #FF3F3A;
@@ -218,11 +218,6 @@ ul.main__text li::before {
 
 }
 
-.createx-courses__course--list {}
-
-.createx-courses__box {}
-
-.box {}
 
 .box__body {
     display: flex;
@@ -255,32 +250,32 @@ ul.main__text li::before {
 }
 
 
-.image-card--1 {
+.card__image-1 {
     background: url('../img/card1.jpg') no-repeat;
 
 }
 
-.image-card--2 {
+.card__image-2 {
     background: url('../img/card2.jpg') no-repeat;
 
 }
 
-.image-card--3 {
+.card__image-3 {
     background: url('../img/card3.jpg') no-repeat;
 
 }
 
-.image-card--4 {
+.card__image-4 {
     background: url('../img/card4.jpg') no-repeat;
 
 }
 
-.image-card--5 {
+.card__image-5 {
     background: url('../img/card5.jpg') no-repeat;
 
 }
 
-.image-card--6 {
+.card__image-6 {
     background: url('../img/card6.jpg') no-repeat;
 }
 
@@ -315,59 +310,52 @@ ul.main__text li::before {
     color: #787A80;
 }
 
-.flag--green {
+.card__flag-green {
     width: 79px;
     height: 23px;
     background: #03CEA4;
     border-radius: 4px;
 }
 
-.flag--orange {
+.card__flag-orange {
     width: 112px;
     height: 23px;
     background: #F89828;
     border-radius: 4px;
 }
 
-.flag--blue {
+.card__flag-blue {
     width: 97px;
     height: 23px;
     background: #5A87FC;
     border-radius: 4px;
 }
 
-.flag--pink {
+.card__flag-pink {
     width: 59px;
     height: 23px;
     background: #F52F6E;
     border-radius: 4px;
 }
 
-.createx-benefits__body {}
 
-.createx-benefits__subtitle {
+.createx__subtitle-benefits {
     text-align: center;
     margin-bottom: 8px;
 }
 
-.subtitle {}
-
-.createx-benefits__title {
+.createx__title-benefits {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.title {}
-
-.createx-benefits__tabs {
+.createx__tabs-benefits {
     display: flex;
     margin-bottom: 60px;
 }
 
-.createx-benefits__tab {}
 
-
-.tab {
+.createx__tab-benefits-tab {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.6;
@@ -378,13 +366,13 @@ ul.main__text li::before {
     padding-top: 8px;
 }
 
-.tab.active {
+.createx__tab-benefits-tab.active {
     color: #FF3F3A;
     border: 1px solid #FF3F3A;
     border-radius: 5px;
 }
 
-.tutors--tab::before {
+.createx__tab-benefits-tutors::before {
     display: inline-block;
     content: '';
     background: url('../img/Star.svg') 0 1px no-repeat;
@@ -394,7 +382,7 @@ ul.main__text li::before {
 
 }
 
-.feedback--tab::before {
+.createx__tab-benefits-feedback::before {
     display: inline-block;
     content: '';
     background: url('../img/like.svg') 0 1px no-repeat;
@@ -403,7 +391,7 @@ ul.main__text li::before {
     margin-right: 8px;
 }
 
-.library--tab::before {
+.createx__tab-benefits-library::before {
     display: inline-block;
     content: '';
     background: url('../img/Layouts.svg') 0 1px no-repeat;
@@ -412,7 +400,7 @@ ul.main__text li::before {
     margin-right: 8px;
 }
 
-.community--tab::before {
+.createx__tab-benefits-community::before {
     display: inline-block;
     content: '';
     background: url('../img/Vector.svg') 0 1px no-repeat;
@@ -422,18 +410,17 @@ ul.main__text li::before {
     margin-right: 8px;
 }
 
-.createx-benefits__info {}
 
-.createx-benefits__block {
+.createx__block-benefits {
     display: flex;
 }
 
-.createx-benefits__context {
+.createx__context-benefits {
     margin-top: 122px;
     width: 495px;
 }
 
-.createx-benefits__sub-title {
+.createx__sub-title-benefits {
     font-weight: 900;
     font-size: 32px;
     line-height: 1.3;
@@ -442,14 +429,13 @@ ul.main__text li::before {
 
 }
 
-.createx-benefits__text {
+.createx__text-benefits {
     line-height: 1.6;
     color: #424551;
 }
 
-.createx-benefits__image {}
 
-.createx-benefits__benefits-image {
+.createx__image-benefits {
     background: url('../img/illustration.svg');
     width: 600px;
     height: 440px;

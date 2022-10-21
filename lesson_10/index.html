@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Lesson_8</title>
 </head>
-<header>
-    <div class="header__container">
-        <div></div>
-    </div>
-</header>
 <div class="main">
     <div class="main__container">
         <div class="main__article">
@@ -62,12 +57,12 @@
 </div>
 <div class="createx">
     <div class="createx__container">
-        <div class="createx__about--createx">
+        <div class="createx__about">
             <div class="createx__item item">
                 <div class="item__image"></div>
             </div>
             <div class="createx__item item">
-                <div class="createx__columns">
+                <div class="item__columns">
                     <div class="item__subtitle subtitle">Who we are</div>
                     <div class="item__title">Why Createx?</div>
                     <ul class="item__list">
@@ -82,24 +77,24 @@
                 </div>
             </div>
         </div>
-        <div class="createx-courses__courses">
-            <div class="createx-courses__subtitle subtitle">Ready to learn?</div>
-            <div class="createx-courses__head">
-                <div class="createx-courses__body">
-                    <div class="createx-courses__title title">Featured Courses</div>
-                    <button class="createx-courses__button button">View all courses</button>
+        <div class="createx__courses">
+            <div class="createx__subtitle subtitle">Ready to learn?</div>
+            <div class="createx__disclamer">
+                <div class="createx__body">
+                    <div class="createx__title title">Featured Courses</div>
+                    <button class="createx__button button">View all courses</button>
                 </div>
             </div>
-            <div class="createx-courses__course--list">
-                <div class="createx-courses__box">
-                    <div class="createx-courses__box box">
+            <div class="createx__course">
+                <div class="createx__wrap">
+                    <div class="createx__box box">
                         <div class="box__body">
                             <div class="box__left">
                                 <div class="box__item">
                                     <div class="box__card card">
-                                        <div class="card__image image-card--1"></div>
+                                        <div class="card__image card__image-1"></div>
                                         <div class="card__content">
-                                            <div class="card__flag flag--green">Marketing</div>
+                                            <div class="card__flag card__flag-green">Marketing</div>
                                             <div class="card__title title">The Ultimate Google Ads Training Course</div>
                                             <div class="card__price"><span class="price">$100</span><span
                                                     class="author"> |
@@ -110,9 +105,9 @@
                                 </div>
                                 <div class="box__item">
                                     <div class="box__card card">
-                                        <div class="card__image image-card--2"></div>
+                                        <div class="card__image card__image-2"></div>
                                         <div class="card__content">
-                                            <div class="card__flag flag--orange">HR & Recruting</div>
+                                            <div class="card__flag card__flag-orange">HR & Recruting</div>
                                             <div class="card__title title">HR Management and Analytics</div>
                                             <div class="card__price"><span class="price">$200</span><span
                                                     class="author"> |
@@ -123,9 +118,9 @@
                                 </div>
                                 <div class="box__item">
                                     <div class="box__card card">
-                                        <div class="card__image image-card--3"></div>
+                                        <div class="card__image card__image-3"></div>
                                         <div class="card__content">
-                                            <div class="card__flag flag--blue">Management</div>
+                                            <div class="card__flag card__flag-blue">Management</div>
                                             <div class="card__title title">Business Development Management</div>
                                             <div class="card__price"><span class="price">$400</span><span
                                                     class="author"> |
@@ -138,9 +133,9 @@
                             <div class="box__right">
                                 <div class="box__item">
                                     <div class="box__card card">
-                                        <div class="card__image image-card--4"></div>
+                                        <div class="card__image card__image-4"></div>
                                         <div class="card__content">
-                                            <div class="card__flag flag--blue">Management</div>
+                                            <div class="card__flag card__flag-blue">Management</div>
                                             <div class="card__title title">Product Management Fundamentals</div>
                                             <div class="card__price"><span class="price">$480</span><span
                                                     class="author"> |
@@ -151,9 +146,9 @@
                                 </div>
                                 <div class="box__item">
                                     <div class="box__card card">
-                                        <div class="card__image image-card--5"></div>
+                                        <div class="card__image card__image-5"></div>
                                         <div class="card__content">
-                                            <div class="card__flag flag--green">Marketing</div>
+                                            <div class="card__flag card__flag-green">Marketing</div>
                                             <div class="card__title title">Brand Management & PR Communications</div>
                                             <div class="card__price"><span class="price">$530</span><span
                                                     class="author"> |
@@ -164,9 +159,9 @@
                                 </div>
                                 <div class="box__item">
                                     <div class="box__card card">
-                                        <div class="card__image image-card--6"></div>
+                                        <div class="card__image card__image-6"></div>
                                         <div class="card__content">
-                                            <div class="card__flag flag--pink">Design</div>
+                                            <div class="card__flag card__flag-pink">Design</div>
                                             <div class="card__title title">Graphic Design Basic</div>
                                             <div class="card__price"><span class="price">$500</span><span
                                                     class="author"> |
@@ -181,21 +176,25 @@
                 </div>
             </div>
         </div>
-        <div class="createx-benefits">
-            <div class="createx-benefits__body">
-                <div class="createx-benefits__subtitle subtitle">Our benefits</div>
-                <div class="createx-benefits__title title">That’s how we do it</div>
-                <div class="createx-benefits__tabs">
-                    <div class="createx-benefits__tab tutors--tab active tab">Experienced Tutors</div>
-                    <div class="createx-benefits__tab feedback--tab tab">Feedback & Support</div>
-                    <div class="createx-benefits__tab library--tab tab">24/7 Online Library</div>
-                    <div class="createx-benefits__tab community--tab tab">Community</div>
+        <div class="createx__benefits">
+            <div class="createx__body-benefits">
+                <div class="createx__subtitle-benefits subtitle">Our benefits</div>
+                <div class="createx__title-benefits title">That’s how we do it</div>
+                <div class="createx__tabs-benefits">
+                    <div class="createx__tab-benefits createx__tab-benefits-tutors active createx__tab-benefits-tab">
+                        Experienced Tutors</div>
+                    <div class="createx__tab-benefits createx__tab-benefits-feedback createx__tab-benefits-tab">Feedback
+                        & Support</div>
+                    <div class="createxs__tab-benefits createx__tab-benefits-library createx__tab-benefits-tab">24/7
+                        Online Library</div>
+                    <div class="createx__tab-benefits createx__tab-benefits-community createx__tab-benefits-tab">
+                        Community</div>
                 </div>
-                <div class="createx-benefits__info">
-                    <div class="createx-benefits__block">
-                        <div class="createx-benefits__context">
-                            <div class="createx-benefits__sub-title">Only practicing tutors</div>
-                            <div class="createx-benefits__text">
+                <div class="createx__info-benefits">
+                    <div class="createx__block-benefits">
+                        <div class="createx__context-benefits">
+                            <div class="createx__sub-title-benefits">Only practicing tutors</div>
+                            <div class="createx__text-benefits">
                                 <p>Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum
                                     suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc,
                                     sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum.
@@ -203,8 +202,8 @@
                                     vehicula.</p>
                             </div>
                         </div>
-                        <div class="createx-benefits__image">
-                            <div class="createx-benefits__benefits-image"></div>
+                        <div class="createx__image-benefits">
+                            <div class="createx__image-benefits"></div>
                         </div>
                     </div>
                 </div>
