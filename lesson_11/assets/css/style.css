@@ -26,6 +26,7 @@ body {
     background: url('../images/Giant_Panda.jpg') center no-repeat;
     width: 100%;
     height: 780px;
+    /* margin-bottom: 140px; */
 }
 
 .header__wrap {
@@ -34,6 +35,12 @@ body {
     display: block;
     width: 100%;
     background: #000000;
+}
+
+.button {
+    text-transform: uppercase;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 30px;
 }
 
 .header__row {
@@ -81,12 +88,6 @@ body {
     padding-left: 380px;
 }
 
-.main__section {}
-
-.main-page {}
-
-.main-page__container {}
-
 .main-page__body {
     padding-top: 92px;
     padding-left: 34.5rem;
@@ -98,7 +99,7 @@ body {
     height: 465px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 50%;
-
+    margin-bottom: 69px;
 }
 
 .main-page__context {
@@ -112,14 +113,76 @@ body {
     text-transform: uppercase;
 }
 
-
-
 .main-page__context--active {
     color: #FFEE2E;
 }
 
+.main-page__button {
+    width: 298px;
+    height: 54px;
+    text-align: center;
+    margin-left: 160px;
+}
+
+.section-backstage {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    margin-bottom: 100px;
+    color: #333B41;
+    position: relative;
+}
+
+.section-backstage__image {
+    position: absolute;
+    top: 0;
+    right: 0;
 
 
-.main-page__button {}
+}
 
-.button {}
+.section-backstage__row {
+    display: flex;
+}
+
+.section-backstage__item--right {
+    margin-left: 84px;
+}
+
+.item {}
+
+.item__image {
+    width: 609px;
+    height: 403px;
+    background: url('../images/bamboo-cap.jpg') center no-repeat;
+
+}
+
+.item__title {
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.item__title:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.item__text {
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.item__text:not(:last-child) {
+    margin-bottom: 54px;
+}
+
+.item__subtitle {
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.item__subtitle:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.subtitle {}
