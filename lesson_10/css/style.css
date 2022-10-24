@@ -35,7 +35,7 @@ body {
     margin-bottom: 60px;
 }
 
-.main__text.bold {
+.main__text--bold {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.5;
@@ -48,6 +48,7 @@ body {
 
 .main__text {
     line-height: 1.6;
+    min-height: 16px;
 }
 
 .main__text:not(:last-child) {
@@ -155,7 +156,9 @@ ul.main__text li::before {
 .item__list li {
     line-height: 1.6;
     margin-left: 32px;
+    min-height: 20px;
 }
+
 
 .item__list li:not(:last-child) {
     margin-bottom: 4px;
@@ -250,32 +253,32 @@ ul.main__text li::before {
 }
 
 
-.card__image-1 {
+.card__image--1 {
     background: url('../img/card1.jpg') no-repeat;
 
 }
 
-.card__image-2 {
+.card__image--2 {
     background: url('../img/card2.jpg') no-repeat;
 
 }
 
-.card__image-3 {
+.card__image--3 {
     background: url('../img/card3.jpg') no-repeat;
 
 }
 
-.card__image-4 {
+.card__image--4 {
     background: url('../img/card4.jpg') no-repeat;
 
 }
 
-.card__image-5 {
+.card__image--5 {
     background: url('../img/card5.jpg') no-repeat;
 
 }
 
-.card__image-6 {
+.card__image--6 {
     background: url('../img/card6.jpg') no-repeat;
 }
 
@@ -317,21 +320,21 @@ ul.main__text li::before {
     border-radius: 4px;
 }
 
-.card__flag-orange {
+.card__flag--orange {
     width: 112px;
     height: 23px;
     background: #F89828;
     border-radius: 4px;
 }
 
-.card__flag-blue {
+.card__flag--blue {
     width: 97px;
     height: 23px;
     background: #5A87FC;
     border-radius: 4px;
 }
 
-.card__flag-pink {
+.card__flag--pink {
     width: 59px;
     height: 23px;
     background: #F52F6E;
@@ -382,7 +385,7 @@ ul.main__text li::before {
 
 }
 
-.createx__tab-benefits-feedback::before {
+.createx__tab-benefits--feedback::before {
     display: inline-block;
     content: '';
     background: url('../img/like.svg') 0 1px no-repeat;
@@ -391,7 +394,7 @@ ul.main__text li::before {
     margin-right: 8px;
 }
 
-.createx__tab-benefits-library::before {
+.createx__tab-benefits--library::before {
     display: inline-block;
     content: '';
     background: url('../img/Layouts.svg') 0 1px no-repeat;
@@ -400,7 +403,7 @@ ul.main__text li::before {
     margin-right: 8px;
 }
 
-.createx__tab-benefits-community::before {
+.createx__tab-benefits--community::before {
     display: inline-block;
     content: '';
     background: url('../img/Vector.svg') 0 1px no-repeat;
