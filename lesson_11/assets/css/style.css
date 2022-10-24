@@ -229,30 +229,62 @@ body {
 }
 
 .section-zoo__image-box {
+    position: relative;
     margin-bottom: 82px;
 }
 
-.section-zoo__image-box::before,
-.section-zoo__image-box::after {
-    content: '';
+.section-zoo__arrow {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-zoo__arrow--right {
     width: 62px;
     height: 62px;
     background-color: #F9804B;
     border-radius: 50%;
+    top: 46%;
+    right: -82px;
 }
 
-.section-zoo__image-box::before {
+.section-zoo__arrow--left {
+    width: 62px;
+    height: 62px;
+    background-color: #F9804B;
+    border-radius: 50%;
+    top: 46%;
+    left: -82px;
+}
 
+.arrow-right {}
+
+.arrow-left {}
+
+/* 
+.section-zoo__arrow--right {
+    top: 40%;
+    right: -82px;
+}
+
+.section-zoo__arrow--left {
+    top: 40%;
+    left: -82px;
+}
+
+
+.section-zoo__image-box::before {
+    content: '';
     top: 40%;
     left: -82px;
 }
 
 .section-zoo__image-box::after {
-    background: url('../icons/Vector-left.svg');
+    content: '';
     top: 40%;
     right: -82px;
-}
+} */
 
 .section-zoo__body {
     position: relative;
@@ -264,6 +296,30 @@ body {
     width: 298px;
     height: 54px;
 
+}
+
+.section-zoo__image {
+    position: relative;
+}
+
+.section-zoo__image--banana::after {
+    width: 33px;
+    height: 37px;
+    content: '';
+    top: -35px;
+    right: 10px;
+    position: absolute;
+    background: url('../icons/banana-bamboo_icon.svg');
+}
+
+.section-zoo__image--fish::after {
+    width: 48px;
+    height: 38px;
+    content: '';
+    top: -35px;
+    right: 10px;
+    position: absolute;
+    background: url('../icons/meet-fish_icon.svg');
 }
 
 .section-zoo__btn {
