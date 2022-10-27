@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+[class*="__container"] {
+    max-width: 1440px;
+    padding: 40px 40px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Roboto, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0b2d39;
+    background-color: #1e7898;
+
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
+}
+
+.transform {}
+
+
+.transform__body {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.transform__wrap {
+    width: 350px;
+    height: 350px;
+    background-color: #2187ab;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    z-index: 100;
+    position: relative;
+}
+
+.transfrom__item::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80px;
+    height: 40px;
+    background: url('../icons/Vector-arr.svg') 0 0 no-repeat;
+
+}
+
+.transfrom__item-rotate-wrap {
+    position: relative;
+    z-index: 100;
+
+}
+
+.transfrom__item-rotate-wrap::before {
+    z-index: 1;
+    content: 'HOW TO POSITION PSEUDOELEMENT BEHIND THE BLOCK?';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2187ab;
+    transform: rotate(-9deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #a8d5e5;
+    transition: all 0.4s linear 0s;
+    /* opacity: 0; */
+
+}
+
+/* .transfrom__item-rotate-wrap:hover::before {
+    opacity: 1;
+} */
+
+.wrap__transform {
+    overflow: hidden;
+}
+
+.wrap__transform:hover .transfrom__item-translate-toggle {
+    transform: translate(0)
+}
+
+.transfrom__item {
+    width: 350px;
+    height: 350px;
+    /* background: linear-gradient(to bottom, #165a72); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: all 0.4s linear 0s;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 20px;
+    box-shadow: inset 10px 10px 30px #134b5f;
+}
+
+.transfrom__item.transfrom__item-translate-toggle {
+    width: 175px;
+    padding-left: 15px;
+}
+
+.transfrom__item-translate-left:hover {
+    transform: translateX(-20%);
+}
+
+.transfrom__item-translate:hover {
+    transform: translate(20%, 20%)
+}
+
+.transfrom__item-translate-top:hover {
+    transform: translateY(-20%);
+}
+
+.transfrom__item-translate-toggle {
+    transform: translate(100%)
+}
+
+.transfrom__item-rotate:hover {
+    transform: rotate(90deg);
+}
+
+.transfrom__item-rotate-45:hover {
+    transform-origin: 100% 100%;
+    transform: rotate(15deg);
+}
+
+.transfrom__item-scale:hover {
+    transform: scale(0.5);
+}
+
+.transfrom__item-scale-inc:hover {
+    transform: scale(1.2);
+}
+
+.transfrom__item-skew:hover {
+    transform: skew(-10deg, -10deg);
+}
+
+.transform__wrap-perspective {
+    perspective: 350px;
+    perspective-origin: center;
+}
+
+.transfrom__item-perspective:hover {
+    transform: rotateY(15deg);
+}
+
+.transfrom__item-perspective-2:hover {
+    transform: rotateX(45deg);
+}
