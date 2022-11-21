@@ -184,7 +184,7 @@ img {
     margin-bottom: 30px;
 }
 
-.main__button {
+.button {
     font-size: 17px;
     line-height: 1.3;
     letter-spacing: 0.06em;
@@ -198,8 +198,9 @@ img {
     align-self: center;
 }
 
-
-.button {}
+.main__button {
+    margin-bottom: 30px;
+}
 
 .footer-section {}
 
@@ -210,4 +211,15 @@ img {
 .footer__content {
     background: url('../images/Footer.jpg') 0 0 no-repeat;
     height: 350px;
+    position: relative;
+}
+
+.footer__content::after {
+    content: '';
+    background: url('../images/footer-puppy.png') 0 0 no-repeat;
+    width: 300px;
+    height: 310px;
+    position: absolute;
+    bottom: 0;
+    right: 40px;
 }
