@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Georgia";
-    src: url("../fonts/Georgia.woff2") format("woff2") url("../fonts/Georgia.woff2") format("woff");
+    src: url("../fonts/Georgia.woff2") format("woff2"), url("../fonts/Georgia.woff2") format("woff");
     font-display: swap;
     font-weight: 400;
     font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Georgia";
-    src: url("../fonts/Georgia-Bold.woff2") format("woff2") url("../fonts/Georgia-Bold.woff") format("woff");
+    src: url("../fonts/Georgia-Bold.woff2") format("woff2"), url("../fonts/Georgia-Bold.woff") format("woff");
     font-display: swap;
     font-weight: 700;
     font-style: normal;
@@ -16,15 +16,15 @@
 
 @font-face {
     font-family: "Arial";
-    src: url("../fonts/Arial.woff2") format("woff2") url("../fonts/Arial.woff") format("woff");
+    src: url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.woff") format("woff");
     font-display: swap;
     font-weight: 400;
     font-style: normal;
 }
 
 [class*="__container"] {
-    max-width: 1320px;
-    padding: 0px 20px;
+    max-width: 1280px;
+    padding: 0px 40px;
     margin: 0 auto;
 }
 
@@ -70,7 +70,7 @@ body {
     color: #292929;
 }
 
-h1 {
+.header__logo:first-child {
     margin-bottom: 10px;
 }
 
@@ -147,34 +147,67 @@ h1 {
 
 img {
     width: 100%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 }
 
 .main__body {}
 
 .main__rows {
-    padding: 0px 40px;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 40px;
     row-gap: 30px;
-    margin: 0px -4px;
+    margin: 0px -24px;
 
+}
+
+.main__column {
+    flex: 0 1 25%;
+    padding: 0px 20px;
 }
 
 .main__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 35px;
     border: 1px solid #F1CDB3;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 10px;
     background: white;
+    position: relative;
+    padding-bottom: 35px;
+    overflow: hidden;
+}
 
+.main__item::before {
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(183, 164, 150, 0.3);
+    z-index: 2;
+    transform: translate(0px, 0px);
+    transition: transform 0.8s ease 0s;
+}
+
+.main__item:hover:before {
+    transform: translate(100%, 100%);
+}
+
+.main__item:hover .main__img {
+    transform: scale(1.2)
+}
+
+.main__item:hover .main__button {
+    background: #f39c5d;
+    border: 1px solid #f39c5d;
 }
 
 .main__img:not(:last-child) {
     margin-bottom: 30px;
+    transition: transform 0.5s ease 0s;
 }
 
 .main__text {
@@ -189,18 +222,25 @@ img {
     margin-bottom: 30px;
 }
 
+.main__text,
+.main__button {
+    padding: 0px 40px;
+}
+
 .button {
     font-size: 17px;
     line-height: 1.3;
     letter-spacing: 0.06em;
     color: #292929;
     text-align: center;
-    border: 2px solid #F1CDB3;
+    border: 1px solid #F1CDB3;
     border-radius: 100px;
-    padding: 13px 0px;
+    padding: 13px 20px;
     width: 187px;
-    height: 52px;
     align-self: center;
+    background: white;
+    transition: border 0.8s ease 0s, background 0.8s ease 0s;
+
 }
 
 .main__button:not(:last-child) {
