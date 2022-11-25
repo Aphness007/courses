@@ -167,6 +167,7 @@ img {
 }
 
 .main__item {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,6 +219,7 @@ img {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
+    flex-grow: 1;
 }
 
 .main__text:not(:last-child) {
