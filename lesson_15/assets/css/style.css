@@ -60,17 +60,6 @@ body {
     align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
-    animation: appear 2s ease;
-}
-
-@keyframes appear {
-    0% {
-        transform: translate(-100%, -100%)
-    }
-
-    100% {
-        transform: translate(0px, 0px)
-    }
 }
 
 .header__logo h2 {
@@ -81,7 +70,6 @@ body {
     align-items: center;
     letter-spacing: 0.1em;
     color: #292929;
-    animation: appear 2s ease;
 }
 
 .header__logo:first-child {
@@ -136,7 +124,7 @@ body {
     width: 100%;
 }
 
-.wrapper>main {
+.main-section {
     flex-grow: 1;
 }
 
