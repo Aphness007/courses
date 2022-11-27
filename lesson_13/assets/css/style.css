@@ -60,6 +60,10 @@ img {
     color: white;
 }
 
+/* .header__nav {
+    flex-grow: 1;
+} */
+
 .header__list li:not(:last-child) {
     margin-right: 58px;
 }
