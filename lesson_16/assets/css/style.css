@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body {
+    font-family: Lato, serif;
+    font-weight: 400;
+    color: #424551;
+    background-color: #ffffff;
+    font-size: 16px;
+
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+[class*="__container"] {
+    max-width: 1275px;
+    padding: 0px 15px;
+    margin: 40px auto;
+}
+
+/* ========= */
+
+.page__createx {}
+
+.createx-block {}
+
+.createx-block__container {}
+
+.createx-block__body {}
+
+.createx-block__columns {
+    display: flex;
+
+}
+
+.createx-block__img {
+    flex: 0 1 35%;
+}
+
+img {
+    width: 100%;
+}
+
+.createx-block__item {
+    flex: 0 1 65%;
+    padding-left: 105px;
+}
+
+.item-content {}
+
+.item-content__subtitle:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1E212C;
+}
+
+.item-content__title:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 1.3;
+    color: #1E212C;
+}
+
+.item-content__form {}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    margin: 0 -12.5px;
+}
+
+.form__line {
+    flex: 0 1 50%;
+    padding: 0 12.5px;
+}
+
+.form__line:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.form__label {
+    display: block;
+    line-height: 1.6;
+    color: #424551;
+    font-size: inherit;
+
+}
+
+.form__label:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.form__label::placeholder,
+textarea.form__text-area::placeholder {
+    line-height: 1.6;
+    color: #9A9CA5;
+    font-family: inherit;
+}
+
+.form__input {
+    padding: 0px 16px;
+    height: 52px;
+}
+
+.form__input,
+textarea {
+    border-radius: 4px;
+    border: 1px solid #9A9CA5;
+}
+
+.form__text-area {
+    resize: vertical;
+    min-height: 129px;
+    min-width: 705px;
+    width: 100%;
+    padding: 13px 16px;
+    overflow: auto;
+}
+
+/* textarea::placeholder {
+    line-height: 1.6;
+    color: #9A9CA5;
+} */
+
+.form__button {
+    width: 340px;
+    height: 52px;
+}
+
+.button {
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 52px;
+    letter-spacing: 0.5px;
+}
+
+.form__line--checkbox {
+    position: relative;
+}
+
+.form__line.form__line--checkbox {
+    margin-bottom: 0px;
+}
+
+.checkbox__label {
+    cursor: pointer;
+    display: inline-flex;
+    gap: 10px;
+    line-height: 1.6;
+}
+
+.checkbox__label::before {
+    content: '';
+    flex: 0 0 16px;
+    margin-top: 1.2%;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border: 1px solid #F75E05;
+    border-radius: 4px;
+
+}
+
+.checkbox__input:checked+.checkbox__label::before {
+    background: #F75E05 url('/assets/images/check.svg') center/ 80% no-repeat;
+}
+
+.checkbox__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.checkbox__span {
+    align-self: center;
+}
+
+/* ====== */
+
+.page__subscription {}
+
+.sibscribe-block {
+    background: #F4F5F7;
+}
+
+.sibscribe-block__container {}
+
+.subscribe-block__body {}
+
+.subscribe-block__row {
+    display: flex;
+}
+
+.subscribe-block__item {
+
+    flex: 1 0 65%;
+    padding-left: 160px;
+}
+
+.subscribe-block__item-block {
+    padding-top: 100px;
+}
+
+.subscribe-block__item-img {
+    flex: 1 1 35%;
+}
+
+.subscribe-block__image {}
+
+.subscribe-block__title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.3;
+    color: #1E212C;
+}
+
+.subscribe-block__title:not(:last-child) {
+    margin-bottom: 48px;
+}
+
+.title {}
+
+.subscribe-block__form {}
+
+.f-form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    margin: 0px -12px;
+}
+
+.form__row.row--mail {
+    flex: 0 1 72%;
+}
+
+.form__row.row-button {
+    flex: 0 1 28%;
+}
+
+.form__row {
+    padding: 0px 12px;
+}
+
+
+.form__text-input {
+    height: 52px;
+    border-radius: 4px;
+    padding: 0px 15px;
+}
+
+.form__text-input::placeholder {
+    line-height: 1.6;
+    color: #9A9CA5;
+
+}
+
+.form__text-button {
+    width: 154px;
+    height: 52px;
+}
+
+.button {}
+
+.form__line {}
+
+.form__line--checkbox {}
+
+.checkbox__input {}
+
+.checkbox__label {}
+
+.checkbox__span {}
+
+.form__row.form__row--checkbox {
+    flex: 1 0 100%;
+}
