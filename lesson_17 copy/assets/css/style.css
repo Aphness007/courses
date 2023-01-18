@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body {
+    font-family: Lato, serif;
+    font-weight: 400;
+    color: #424551;
+    background-color: #F6F6F6;
+
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+/* ========= */
+
+[class*="__container"] {
+    max-width: 1260px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+
+.page__block {}
+
+.block-page {}
+
+.block-page__container {}
+
+.block-page__column {
+    border: 1px solid goldenrod;
+    margin: 15px;
+
+}
+
+.block-page__item {
+    padding: 15px;
+}
+
+@media(min-width: 420px) {
+    .block-page__row {
+        display: flex;
+        margin: 0px -15px;
+        flex-wrap: wrap;
+    }
+
+    /* .block-page__column {
+        flex: 0 1 50%;
+    } */
+
+}
+
+@media(max-width: 580px) {
+    .block-page__column {
+        flex: 0 1 50%;
+    }
+
+    block-page__column:last-child {
+        flex: 1 1 100%;
+    }
+
+}
