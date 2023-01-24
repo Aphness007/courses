@@ -1,0 +1,55 @@
+.header {
+    background-color: rgb(185, 50, 231);
+    padding: 15px;
+    width: 100%;
+    z-index: 2;
+}
+
+.testimonial {}
+
+.testimonial__image__container {}
+
+.testimonial__box:not(:last-child) {
+    margin-bottom: 60px;
+
+}
+
+.testimonial__image__container {
+    padding-top: 60px;
+    background: linear-gradient(to bottom, rgb(185, 50, 231), transparent 70%);
+}
+
+.testimonial__row {
+    display: flex;
+    gap: 50px;
+}
+
+
+
+.testimonial__image {
+    max-width: 650px;
+    max-height: 450px;
+}
+
+.testimonial__info {
+    color: blue;
+    font-size: 1.125rem;
+    margin: 20px 0px;
+    padding: 0px 20px;
+}
+
+.testimonial__name {
+    color: rgb(209, 50, 50);
+    font-weight: 900;
+    font-size: 1.375rem;
+    line-height: 1.5;
+    margin-bottom: 1.625rem;
+}
+
+.testimonial__subtitle {
+    color: rgb(142, 129, 129);
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+
+.testimonial__text {}

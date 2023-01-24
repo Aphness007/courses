@@ -134,6 +134,7 @@ body {
 
 .header__link:hover:before {
     width: 100%;
+    cursor: pointer;
 }
 
 .wrapper>main {

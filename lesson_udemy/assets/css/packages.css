@@ -1,0 +1,71 @@
+.packages__container {
+    margin: 2.5rem auto;
+}
+
+.packages__section {
+    border: 1px solid black;
+    padding: 40px;
+    background: rgb(51, 107, 51);
+    border-radius: 15px;
+    position: relative;
+}
+
+.packages__section:not(:last-child) {
+    margin-bottom: 1.875rem;
+}
+
+.packages__section p:not(:last-child) {
+    margin-bottom: 0.5rem;
+
+}
+
+.packages__section p {
+    text-align: center;
+}
+
+.packages__section--plus {}
+
+.packages__title {}
+
+.title {}
+
+.packages__description {}
+
+.description {
+    padding: 0.93rem;
+    background-color: white;
+    color: black;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+}
+
+.packages__section--free {}
+
+.packages__section--premium {
+    background-color: rgb(10, 187, 178);
+}
+
+.description:hover {
+    border: 2px solid rgb(222, 8, 58);
+}
+
+.background {
+    background: url("../images/Giant_Panda.jpg") center no-repeat;
+    filter: brightness(50%);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.packages__badge {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    border: 1px red;
+    background: red;
+    padding: 1.857rem 1.25rem;
+    border-radius: 50%;
+    font-size: 0.75rem;
+}
