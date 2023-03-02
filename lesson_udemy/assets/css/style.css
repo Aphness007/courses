@@ -168,3 +168,17 @@
 .info__image:not(:last-child) {
     margin-bottom: 20px;
 }
+
+.modal {}
+
+.modal__title {}
+
+.title {}
+
+.modal__actions {}
+
+.modal__action {}
+
+.modal__action--positive {}
+
+.modal__action--negative {}

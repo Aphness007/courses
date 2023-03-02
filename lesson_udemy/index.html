@@ -13,11 +13,22 @@
 
 <body>
     <div class="wrapper">
+        <div class="backdrop"></div>
+        <div class="modal">
+            <h1 class="modal__title title">Modal Window</h1>
+            <div class="modal__actions">
+                <a href="" class="modal__action modal__action--positive">Yes</a>
+                <button class=" modal__action modal__action--negative">No</button>
+            </div>
+        </div>
         <header class="header">
             <div class="header__container">
                 <div class="header__row">
-                    <div class="header__logo"><a class="header__logo--link" href="index.html"><img
-                                src="assets/images/uhost-icon.png" alt="uHost"></a></div>
+                    <div class="header__logo">
+                        <a class="header__logo--link" href="index.html">
+                            <img src="assets/images/uhost-icon.png" alt="uHost">
+                        </a>
+                    </div>
                     <nav class="header__nav">
                         <ul class="header__list">
                             <li class="header__item"><a class="header__link" href="packages/index.html">Packages</a>
@@ -43,7 +54,7 @@
                 <div class="price__container">
                     <div class="plan__list">
                         <h2 class="price__title title">Choose Your Plan:</h2>
-                        <article class="price__plan">
+                        <article class="plan price__plan ">
                             <div class="price__plan--title">FREE</div>
                             <h2 class="price__pr">$0/month</h2>
                             <h3 class="price__plan--subtitle">For hobby projects or small teams.</h3>
@@ -54,10 +65,10 @@
                                 <li>Basic Support</li>
                             </ul>
                             <div>
-                                <button class="plan__cta">CHOOSE PLAN</button>
+                                <button class="plan__cta button">CHOOSE PLAN</button>
                             </div>
                         </article>
-                        <article class="price__plan price__plan--highlight">
+                        <article class="plan price__plan price__plan--highlight">
                             <div class="price__plan--recommended">RECOMMENDED</div>
                             <div class="price__plan--title price__plan--hightlight">PLUS</div>
                             <h2 class="price__pr">$29/month</h2>
@@ -69,10 +80,10 @@
                                 <li>Plus Support</li>
                             </ul>
                             <div>
-                                <button class="plan__cta">CHOOSE PLAN</button>
+                                <button class="plan__cta button">CHOOSE PLAN</button>
                             </div>
                         </article>
-                        <article class="price__plan">
+                        <article class="plan price__plan">
                             <div class="price__plan--title">PREMIUM</div>
                             <h2 class="price__pr">$99/month</h2>
                             <h3 class="price__plan--subtitle">Your enterprise solution.</h3>
@@ -83,7 +94,7 @@
                                 <li>Priority Support</li>
                             </ul>
                             <div>
-                                <button class="plan__cta">CHOOSE PLAN</button>
+                                <button class="plan__cta button">CHOOSE PLAN</button>
                             </div>
                         </article>
                     </div>
@@ -130,6 +141,7 @@
             </nav>
         </footer>
     </div>
+    <script src="shared.js"></script>
 </body>
 
 </html>
