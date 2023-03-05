@@ -50,16 +50,34 @@ if (menuLinks.length > 0) {
 }
 function smoothScroll(e) {
     const menuLink = e.target;
-    console.log('menuLink: ' + menuLink);
     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
         const gotoBlock = document.querySelector(menuLink.dataset.goto);
-        console.log('gotoBlock: ' + gotoBlock);
         const goBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-        console.log('goBlockValue: ' + goBlockValue);
+
+        if (iconMenu.classList.contains('_active')) {
+            menuBody.classList.remove('_active');
+            iconMenu.classList.remove('_active');
+            document.body.classList.remove('_lock');
+        }
         window.scrollTo({
             top: goBlockValue,
             behavior: "smooth"
         });
         e.preventDefault();
     }
+}
+
+
+/*  ============= MENU BURGER ==============  */
+
+const menuBody = document.querySelector('.menu__body');
+const iconMenu = document.querySelector('.menu__icon');
+
+if (iconMenu) {
+    iconMenu.addEventListener('click', openMenu);
+}
+function openMenu() {
+    menuBody.classList.toggle('_active');
+    iconMenu.classList.toggle('_active');
+    document.body.classList.toggle('_lock')
 }

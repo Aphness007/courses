@@ -28,6 +28,10 @@ body {
     margin: 0 auto;
 }
 
+body._lock {
+    overflow: hidden;
+}
+
 .page {
     padding: 5.625rem 0rem;
 }
@@ -90,7 +94,7 @@ body {
 
 .header__container {
     display: flex;
-    padding: 0rem 3.75rem;
+    padding: 0rem 1.875rem;
     align-items: center;
     justify-content: space-between;
     min-height: 70px;
@@ -110,7 +114,9 @@ body {
 
 .menu {}
 
-.menu__icon {}
+.menu__icon {
+    display: none;
+}
 
 .menu__body {}
 
@@ -224,4 +230,122 @@ body._touch .menu__list>li._active .menu__arrow {
         pointer-events: none;
         transition: all 0.5s linear 0s;
     }
+}
+
+/* ------------  MENU BURGER  ---------------- */
+
+@media (max-width: 767px) {
+    .menu__icon {
+        display: block;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        width: 30px;
+        height: 18px;
+    }
+
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        position: absolute;
+        /* display: block; */
+        left: 0;
+        height: 10%;
+        width: 100%;
+        background-color: white;
+        transition: all 0.5s ease 0s;
+
+    }
+
+    .menu__icon::before,
+    .menu__icon::after {
+        content: '';
+    }
+
+    .menu__icon::before {
+        top: 0;
+
+    }
+
+    .menu__icon::after {
+        bottom: 0;
+    }
+
+    .menu__icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%)
+    }
+
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(11, 11, 11, 0.9);
+        padding: 100px 30px 30px 30px;
+        overflow: auto;
+        /* scroll for small height devices*/
+        transition: left 0.5s ease 0s;
+    }
+
+    .menu__body._active {
+        left: 0;
+    }
+
+    .menu__body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #ef7373;
+        z-index: 2;
+    }
+
+    .menu__list>li {
+        flex-wrap: wrap;
+    }
+
+    .menu__list>li:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .menu__link {
+        font-size: 24px;
+    }
+
+    .menu__list>li._active .menu__sub-list {
+        display: block;
+    }
+
+    .menu__sub-list {
+        flex: 1 1 100%;
+        position: relative;
+        background-color: antiquewhite;
+        margin: 20px 0px 0px 0px;
+        display: none;
+    }
+
+    .menu__sub-link {
+        font-size: 20px;
+        color: #000;
+    }
+
+    /* --------- transform burger ------------ */
+    .menu__icon._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    .menu__icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .menu__icon._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
 }
