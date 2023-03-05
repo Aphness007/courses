@@ -81,3 +81,16 @@ function openMenu() {
     iconMenu.classList.toggle('_active');
     document.body.classList.toggle('_lock')
 }
+function closeMenu() {
+    menuBody.classList.remove('_active');
+    iconMenu.classList.remove('_active');
+    document.body.classList.remove('_lock');
+}
+menuBody.addEventListener('click', function (e) {
+    if (menuBody.classList.contains('_active')) {
+        menuBody.addEventListener('click', closeMenu);
+    }
+});
+
+
+
