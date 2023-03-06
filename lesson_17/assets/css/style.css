@@ -341,6 +341,11 @@ body {
     gap: 20px;
     align-items: center;
 } */
+@media(max-width: 479px) {
+    .advantages-main__circle {
+        display: none;
+    }
+}
 
 @media(min-width: 480px) {
     .advantages-main {
@@ -352,6 +357,7 @@ body {
     }
 
     .item-advantages {
+        flex: 0 0 45%;
         display: flex;
         align-items: center;
         gap: 12px;
