@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"HomePage"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__main main-block">
+					<div class="main-block__container">
+						<div class="main-block__body">
+							<div class="main-block__overlay"></div>
+							<div class="main-block__welcome"><h2>Welcome 
+								<br>to the Brooklyn<br>Library</h2></div>
+						</div>
+					</div>
+				</section>
+				<section  class="page__about about-block" id="about-block">
+						<div class="about-block__container">
+							<div class="about-block__body  main-slider">
+								<div class="about-block__title title"><h2>About</h2></div>
+								<div class="about-block__subtitle subtitle">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </div>
+								<div class="main-slider__slider-container">
+									<!-- Оболонка слайдеру-->
+									<div class="main-slider__slider swiper">
+										<!-- Оболонка слайдеру, що рухается -->
+										<div class="main-slider__wrapper swiper-wrapper">
+											<!-- Слайд -->
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/img/image-1.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/img/image-2.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/img/image-3.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/img/image-4.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/img/image-5.jpg" alt="img">
+												</div>
+											</div>
+										</div>
+									</div>
+								<div class="main-slider__pagination"></div>
+								</div>
+							</div>
+						</div>
+				</section>
+				<section class="page__favorite favorite-block" id="favorite-block">
+					<div class="favorite-block__container">
+						<div class="favorite-block__body">
+							<div class="favorite-block__title title"><h2>Favorites</h2></div>
+							<div class="favorite-block__subtitle subtitle">Pick favorites of season</div>
+							<div class="favorite-block__seasons seasons-block">
+								<div class="seasons-block__body">
+									<div class="seasons-block__item">
+										<label for="option1">
+											<input type="radio" id="option1" name="seasonGroup">
+											<span class="active">Winter</span>
+										</label>
+										<label for="option2">
+											<input type="radio" id="option2" name="seasonGroup">
+											<span>Spring</span>
+										</label>
+										<label for="option3">
+											<input type="radio" id="option3" name="seasonGroup">
+											<span>Summer</span>
+										</label>
+										<label for="option4">
+											<input type="radio" id="option4" name="seasonGroup">
+											<span>Autumn</span>
+										</label>
+								  </div>
+							</div> 
+							<div class="seasons-block__library library-block">
+								<div class="library-block__body">
+									<div class="library-block__item">
+										<div class="library-block__column">
+											<div class="library-block__title">Staff Picks</div>
+										<div class="library-block__subtitle">The Book Eaters
+											<br><span>by sunyi dean</span></div>
+											<div class="library-block__content">
+												<div class="library-block__text">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</div>
+												<img src="@img/img/book-1.jpg" alt="book-img">
+											</div>
+										<button class="library-block__btn common-button">Buy</button>
+										</div>
+									</div>
+									<div class="library-block__item">
+										<div class="library-block__column">
+											<div class="library-block__title">Staff Picks</div>
+										<div class="library-block__subtitle">Cackle
+											<br><span>by rachel harrison</span></div>
+										<div class="library-block__content">
+											<div class="library-block__text">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</div>
+											<img src="@img/img/book-2.jpg" alt="book-img">
+										</div>
+										<button class="library-block__btn common-button">Buy</button>
+										</div>
+									</div>
+									<div class="library-block__item">
+										<div class="library-block__column">
+											<div class="library-block__title">Staff Picks</div>
+										<div class="library-block__subtitle">Dante: Poet of the Secular World
+											<br><span>by erich auerbach</span></div>
+											<div class="library-block__content">
+											<div class="library-block__text">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</div>
+											<img src="@img/img/book-3.jpg" alt="book-img">
+										</div>
+										<button class="library-block__btn common-button">Buy</button>
+									</div>
+									</div>
+									<div class="library-block__item">
+										<div class="library-block__column">
+											<div class="library-block__title">Staff Picks</div>
+											<div class="library-block__subtitle">The Last Queen
+											<br><span>by clive irving</span></div>
+											<div class="library-block__content">
+												<div class="library-block__text">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</div>
+												<img src="@img/img/book-4.jpg" alt="book-img">
+											</div>
+										<button class="library-block__btn common-button disabled active-own">Own</button>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					</div>
+				</section>
+				<section class="page__coffee coffee-block" id="coffee-block">
+					<div class="coffee-block__container">
+						<div class="coffee-block__body">
+							<div class="coffee-block__title title"><h2>Coffee shop</h2></div>
+							<div class="coffee-block__subtitle subtitle">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.<br>
+								You can get a favorite book and read in coffee shop. our barista to cook you best coffee, and also you can try desserts<br>from bakery.</div>
+							<div class="coffee-block__block block-coffee">
+								<div class="block-coffee__body">
+									<div class="block-coffee__column column-left">
+										<div class="block-coffee__title item-title">Coffee & Tea</div>
+										<div class="block-coffee__item item-box">
+											<div class="item-box__body">
+												<div class="item-box__naming">Cold Brew Coffee</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$3</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">French Press Pot</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$5</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Espresso</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$2</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Cappuccino</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$4</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Hot tea</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$2</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Cold tea</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$2</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-coffee__column column-right">
+										<div class="block-coffee__title item-title">Desserts & Cakes</div>
+										<div class="block-coffee__item item-box">
+											<div class="item-box__body">
+												<div class="item-box__naming">Forest Gateau</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$16</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Blue Moon</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$16</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Truffle Cake</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$15</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Chocolate Cake</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$18</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Poet’s Dream Cake</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$16</div>
+											</div>
+											<div class="item-box__body">
+												<div class="item-box__naming">Pineapple Cake</div>
+												<div class="item-box__decor"><span></span></div>
+												<div class="item-box__price">$14</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__contacts contacts-block" id="contacts-block">
+					<div class="contacts-block__container">
+						<div class="contacts-block__title title"><h2>Our Contacts</h2></div>
+						<div class="contacts-block__body">
+							<div class="contacts-block__item">
+								<div class="contacts-block__content">
+								<div class=""><span>For all Library inquiries:</span></div>
+								<div class="contacts-block__contacts">
+									<div class="">Please call <a href="tel:(617)730-2370">(617) 730-2370</a></div>
+									<div class="">For TTY service, please call <a href="tel:(617)730-2370">(617) 730-2370</a></div>
+									<div class="">Putterham Library: <a href="tel:(617)730-2385">(617) 730-2385</a></div>
+								</div>
+								<div class=""><span>Senior Staff</span></div>
+								<div class="">Library Director: <span><a href="mailto:AmandaHirst@gmail.com" target="'_blank">Amanda Hirst</a></span></div>
+								</div>
+							</div>
+							<div class="contacts-block__item">
+								<img src="@img/img/map.jpg" alt="map-img">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__cards cards-block" id="cards-block">
+					<div class="cards-block__container">
+						<div class="cards-block__title title"><h2>Digital Library Cards</h2></div>
+						<div class="cards-block__body">
+							<div class="cards-block__item item-block">
+								<div class="item-block__title">Find your Library card</div>
+								<div class="item-block__form-container">
+									<form class="item-block__form form" action="#" method="POST" enctype="multipart/form-data" >
+										<div class="form__line">
+											<div class="form__box">
+												<div class="form__item">
+													<label class="form__label" for="f-name">Brooklyn Public Library</label>
+													<input class="form__input" required type="text" id="card-name" autocomplete="off"
+													name="name" placeholder="Reader's name">
+												</div>
+												<div class="form__item">
+													<input class="form__input" required type="text"id="card-number" autocomplete="off"
+													name="name" placeholder="Card number">
+												</div>
+											</div>
+										</div>
+										<div class="form__line">
+												<button class="form__button button" type="submit">Check the card</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="cards-block__item item-block">
+								<div class="item-block__content">
+									<div class="item-block__subtitle">Get a reader card</div>
+									<div class="item-block__text">You will be able to see a reader card after<br>logging into account or you can register a new<br> account</div>
+									<div class="item-block__btns">
+										<button class="item-block__btn common-button">Sign Up</button>
+										<button class="item-block__btn common-button">Log in</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
