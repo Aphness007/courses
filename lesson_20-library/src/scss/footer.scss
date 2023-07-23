@@ -50,6 +50,11 @@
         line-height: 1.2rem;
         letter-spacing: -0.05rem;
         word-spacing: 0.1rem;
+        & > a{
+            &:hover{
+                color: #BB945F;
+            }
+        }
         &.info-footer{
         font-size: 20px;
         font-style: normal;

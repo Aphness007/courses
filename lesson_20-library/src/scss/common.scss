@@ -1,13 +1,19 @@
 // Заголовки, загальні БЕМ блоки та інше...
-// html{
-//     scroll-behavior: smooth;
-// }
+html{
+    scroll-behavior: smooth;
+}
 
 /*   Common styles    */
 
 [class*="__container"] {
+    min-width: 1440px;
     padding: rem(0) rem(20);
-    overflow: hidden;
+    @media (max-width: $tablet) {
+        min-width: 768px;
+    }
+        
+    
+    // overflow: hidden;
 }
 
 .title > h2{
@@ -63,6 +69,7 @@
     }
     &.active-own{
         border: 1px solid #BB945F;
+        cursor: default;
     }
 }
 .button{
@@ -108,10 +115,10 @@ img{
     }
     &__container {
         padding: rem(0) rem(0);
-        background: url("../img/jpg:webp/Welcome.jpg") 0 0 no-repeat;
+        background: url("../img/image/Welcome.jpg") 0 0 no-repeat;
         @media (max-width: $tablet) {
             padding: rem(0);
-            background: url("../img/jpg:webp/Welcome-tablet.jpg") 0 0 no-repeat;
+            background: url("../img/image/Welcome-tablet.jpg") 0 0 no-repeat;
         }
     }
 
@@ -274,9 +281,11 @@ img{
 
     &__item {
         display: flex;
-        column-gap: 5rem;
+        column-gap: 4.15rem;
         cursor: pointer;
+        
         label{
+            min-width: 125px;
             input[type="radio"]{
                 display: none;
               }
@@ -289,16 +298,15 @@ img{
                 display: inline-flex;
                 align-items: center;
                 position: relative;
+                transition: all 0.5s ease;
             }
             span.active{
-                font-weight: 700;
+                font-weight: bold;
+                transition: all 0.5s ease;
             }
             span.active::after{
                 transform: scale(1);
             }
-            // span:hover{
-            //     color:red;
-            // }
             span::before{
                 content:'';
                 background: white;
@@ -308,6 +316,7 @@ img{
                 margin-right: 20px;
                 box-shadow: inset 0 0 0 2px  black;
             }
+            
             span::after{
                 position: absolute;
                 content:'';
@@ -316,12 +325,12 @@ img{
                 height: 8px;
                 border-radius: 50%;
                 top: 6.5px;
-                left: 4.4px;
-                transition: all  0.5s ease;
+                left: 4.5px;
+                transition: all 0.5s ease;
                 transform: scale(0);
             }
+            
         } 
-       
         
     }
     // .seasons-block__library
@@ -340,7 +349,7 @@ img{
         row-gap: 2.35rem;
         margin: 0px -1px;
         
-    @media (max-width: $pc) {
+    @media (max-width: $tablet) {
         justify-content: center;
     }
     }
@@ -353,7 +362,7 @@ img{
         border: 1px solid #000;
         &:nth-child(even){
             margin-right: 1.8em;
-            @media (max-width: $pc) {
+            @media (max-width: $tablet) {
                 margin-right: 0em;
             }
         }
@@ -701,6 +710,7 @@ text-transform: capitalize;
     // .cards-block__container
 
     &__container {
+        
     }
 
     // .cards-block__title
@@ -717,9 +727,15 @@ text-transform: capitalize;
     &__body {
         display: flex;
         justify-content: space-between;
-        div:first-child{
-            overflow: hidden;
-            min-width: 30.5rem;
+        
+        & .item-block-left{
+                min-width: 35.4rem;
+            }
+        & .item-block-right{
+            max-width: 30rem;
+            @media (max-width: $tablet) {
+                max-width: 35.4rem;
+            }
         }
         @media (max-width: $tablet) {
             flex-wrap: wrap;
@@ -748,15 +764,18 @@ text-transform: capitalize;
     }
 
     &__subtitle{
-        text-align: end;
         font-family: Forum;
         font-size: 30px;
         letter-spacing: 0.6px;
         }
-
-    &__form-container{
+        &__form-container{
+           
+        }
+    &__body{
         border: 3px solid #BB945F;
         padding: 1.02rem;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        
     }
     // .item-block__form
 
@@ -770,20 +789,25 @@ text-transform: capitalize;
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        align-items: flex-end;
         row-gap: 2.12rem;
-        div{
-            align-self: flex-end;
+        padding: rem(0) rem(0) rem(0) rem(40);
+        @media (max-width: $tablet) {
+            padding: rem(0) rem(0) rem(0) rem(0);
+            align-items: center;
         }
     }
 
     // .item-block__text
 
     &__text {
-    text-align: right;
     line-height: 40px; /* 200% */    
     letter-spacing: 0.4px;
     word-spacing: -0.15rem;
+    text-align: end;
+    @media (max-width: $tablet) {
+        text-align: center;
+    }
     }
 
     // .item-block__btns
@@ -836,9 +860,22 @@ letter-spacing: 1px;
         font-size: 30px;
         line-height: 50px; /* 166.667% */
         letter-spacing: 0.6px;
+        position: relative;
+        &.visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          } 
              &:not(:last-child){
                  margin-bottom: rem(20);
-}
+                }  
+                
     }
 
     // .form__input
