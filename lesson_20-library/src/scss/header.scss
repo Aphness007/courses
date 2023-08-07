@@ -7,10 +7,10 @@
 	color: #FFFFFF;
 
 	&__container {
-		min-height: rem(90);
+		min-height: 90px;
 		display: flex;
 		align-items: center;
-		padding: rem(5) rem(18);
+		padding: 20px;
 	}
 
 	// .header__logo
@@ -32,7 +32,7 @@
 		flex: 1 1 auto;
 		justify-content: flex-end;
 		// padding-right: rem(40);
-		@media (max-width: $tablet) {
+		@media (max-width: 1030px)  {
 			align-items: center;
 			column-gap: rem(40);
 		}
@@ -52,7 +52,7 @@
 		align-items: center;
 		// padding-right: rem(40);
 		// @include adaptiveValue("gap", 10, 15);
-		@media (max-width: $tablet) {
+		@media (max-width: 1030px)  {
 			background-color: #0C0C0E;
 			position: fixed;
 			width: 100%;
@@ -89,7 +89,7 @@
 	&__list {
 		display: flex;
 		@include adaptiveValue("column-gap", 30, 15);
-		@media (max-width: $tablet){
+		@media (max-width: 1030px) {
 			padding:rem(100) rem(5);
 			flex-direction: column;
 			align-items: center;
@@ -100,7 +100,7 @@
 	// .menu__item
 
 	&__item {
-		@media (max-width: $tablet){
+		@media (max-width: 1030px) {
 			position: relative;
 			left: -100%;
 			transition: left 0.5s ease;
@@ -145,7 +145,7 @@
 	z-index: 100;
 	padding-left: rem(40);
 	// .action--header__login
-	@media (max-width: $tablet){
+	@media (max-width: 1030px) {
 		padding-left: 0rem;
 	}
 
@@ -171,7 +171,7 @@
 
 .icon-menu{
 	display: none;
-	@media (max-width: $tablet) {
+	@media (max-width: 1030px) {
 		display: block;
 		position: relative;
 		width: rem(40);

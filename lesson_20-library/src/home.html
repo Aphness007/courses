@@ -11,50 +11,35 @@
 					<div class="main-block__container">
 						<div class="main-block__body">
 							<div class="main-block__overlay"></div>
-							<div class="main-block__welcome"><h2>Welcome 
-								<br>to the Brooklyn<br>Library</h2></div>
+							<div class="main-block__welcome"><p>Welcome 
+								<br>to the Brooklyn<br>Library</p></div>
 						</div>
 					</div>
 				</section>
 				<section  class="page__about about-block" id="about-block">
 						<div class="about-block__container">
-							<div class="about-block__body  main-slider">
+							<div class="about-block__body">
 								<div class="about-block__title title"><h2>About</h2></div>
 								<div class="about-block__subtitle subtitle">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </div>
-								<div class="main-slider__slider-container">
-									<!-- Оболонка слайдеру-->
-									<div class="main-slider__slider swiper">
-										<!-- Оболонка слайдеру, що рухается -->
-										<div class="main-slider__wrapper swiper-wrapper">
-											<!-- Слайд -->
-											<div class="main-slider__slide slide-main-slider swiper-slide">
-												<div class="slide-main-slider__image">
-													<img src="@img/image/image-1.jpg" alt="img">
-												</div>
-											</div>
-											<div class="main-slider__slide slide-main-slider swiper-slide">
-												<div class="slide-main-slider__image">
-													<img src="@img/image/image-2.jpg" alt="img">
-												</div>
-											</div>
-											<div class="main-slider__slide slide-main-slider swiper-slide">
-												<div class="slide-main-slider__image">
-													<img src="@img/image/image-3.jpg" alt="img">
-												</div>
-											</div>
-											<div class="main-slider__slide slide-main-slider swiper-slide">
-												<div class="slide-main-slider__image">
-													<img src="@img/image/image-4.jpg" alt="img">
-												</div>
-											</div>
-											<div class="main-slider__slide slide-main-slider swiper-slide">
-												<div class="slide-main-slider__image">
-													<img src="@img/image/image-5.jpg" alt="img">
-												</div>
+								<div class="about-block__sliders sliders">
+									<button class="about-block__slider slider--back"><img src="@img/svg/carret-icon-back.svg" alt=""></button>
+										<div class="about-block__carousel">
+											<img src="@img/image/image-1.jpg" alt="image">
+											<img src="@img/image/image-2.jpg" alt="image">
+											<img src="@img/image/image-3.jpg" alt="image">
+											<img src="@img/image/image-4.jpg" alt="image">
+											<img src="@img/image/image-5.jpg" alt="image">
+										</div>
+										<button class="about-block__slider slider--forward"><img src="@img/svg/carret-icon-forward.svg" alt=""></button>
+										<div class="about-block__pagination pagination">
+											<div class="pagination__body">
+												<a class="pagination__cover"><div class="pagination__item active"></div></a>
+												<a class="pagination__cover"><div class="pagination__item"></div></a>
+												<a class="pagination__cover"><div class="pagination__item"></div></a>
+												<a class="pagination__cover cover--mobile"><div class="pagination__item"></div></a>
+												<a class="pagination__cover cover--mobile"><div class="pagination__item"></div></a>
 											</div>
 										</div>
-									</div>
-								<div class="main-slider__pagination"></div>
 								</div>
 							</div>
 						</div>
@@ -141,8 +126,12 @@
 					<div class="coffee-block__container">
 						<div class="coffee-block__body">
 							<div class="coffee-block__title title"><h2>Coffee shop</h2></div>
-							<div class="coffee-block__subtitle subtitle">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.<br>
-								You can get a favorite book and read in coffee shop. our barista to cook you best coffee, and also you can try desserts<br>from bakery.</div>
+							<div class="coffee-block__subtitle subtitle">
+								<p>In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.</p>
+								<p>You can get a favorite book and read in coffee shop. our barista to cook you best coffee, and also you can try desserts from</p>
+								<p>bakery</p>
+
+								</div></p>
 							<div class="coffee-block__block block-coffee">
 								<div class="block-coffee__body">
 									<div class="block-coffee__column column-left">
@@ -288,6 +277,41 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
+		<!-- <div class="main-slider__slider-container">
+									
+									<div class="main-slider__slider swiper">
+										
+										<div class="main-slider__wrapper swiper-wrapper">
+								
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/image/image-1.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/image/image-2.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/image/image-3.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/image/image-4.jpg" alt="img">
+												</div>
+											</div>
+											<div class="main-slider__slide slide-main-slider swiper-slide">
+												<div class="slide-main-slider__image">
+													<img src="@img/image/image-5.jpg" alt="img">
+												</div>
+											</div>
+										</div>
+									</div>
+								<div class="main-slider__pagination"></div>
+								</div> -->
 		@@include('html/_js.htm',{})
 	</body>
 </html>

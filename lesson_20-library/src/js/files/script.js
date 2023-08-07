@@ -116,3 +116,53 @@ function restrictInput(pattern, event) {
   inputElement.value = sanitizedValue;
 }
 // restrict input to accept only numbers and dashes
+
+// SCROLL
+
+const carousel = document.querySelector(".about-block__carousel");
+const arrows = document.querySelectorAll(".about-block__slider");
+const images = carousel.querySelectorAll("img");
+const imageWidth = images[0].clientWidth + 25; // Ширина слайда + отступ
+
+const paginationItems = document.querySelectorAll(".pagination__body .pagination__item");
+console.log(paginationItems);
+
+let currentSlideIndex = 0;
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener('click', () => {
+    if (arrow.classList.contains('slider--forward')) {
+      currentSlideIndex = (currentSlideIndex + 1) % images.length;
+    } else {
+      currentSlideIndex = (currentSlideIndex - 1 + images.length) % images.length;
+    }
+
+    updateSliderPosition();
+    updatePagination();
+  });
+});
+
+paginationItems.forEach((paginationItem, index) => {
+  paginationItem.addEventListener('click', () => {
+    currentSlideIndex = index;
+    updateSliderPosition();
+    updatePagination();
+  });
+});
+
+function updateSliderPosition() {
+  carousel.scrollLeft = currentSlideIndex * imageWidth;
+}
+
+function updatePagination() {
+  paginationItems.forEach((paginationItem, index) => {
+    if (index === currentSlideIndex) {
+      paginationItem.classList.add('active');
+    } else {
+      paginationItem.classList.remove('active');
+    }
+  });
+}
+
+
+// SCROLL
