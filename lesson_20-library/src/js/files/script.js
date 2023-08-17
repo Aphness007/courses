@@ -123,11 +123,10 @@ const carousel = document.querySelector(".about-block__carousel");
 const arrows = document.querySelectorAll(".about-block__slider");
 const images = carousel.querySelectorAll("img");
 const imageWidth = images[0].clientWidth + 25; // Ширина слайда + отступ
-
 const paginationItems = document.querySelectorAll(".pagination__body .pagination__item");
-console.log(paginationItems);
 
 let currentSlideIndex = 0;
+updateArrow();
 
 arrows.forEach((arrow) => {
   arrow.addEventListener('click', () => {
@@ -136,9 +135,9 @@ arrows.forEach((arrow) => {
     } else {
       currentSlideIndex = (currentSlideIndex - 1 + images.length) % images.length;
     }
-
     updateSliderPosition();
     updatePagination();
+    updateArrow();
   });
 });
 
@@ -161,8 +160,22 @@ function updatePagination() {
     } else {
       paginationItem.classList.remove('active');
     }
+    updateArrow();
   });
 }
-
+function updateArrow() {
+  arrows.forEach((arrow, index) => {
+    if (currentSlideIndex === 0 && index === 0) {
+      arrow.classList.add('arrow-disabled');
+    } else if (currentSlideIndex === images.length - 1 && index === 1) {
+      arrow.classList.add('arrow-disabled');
+    } else {
+      arrow.classList.remove('arrow-disabled');
+    }
+  });
+} 
 
 // SCROLL
+
+
+

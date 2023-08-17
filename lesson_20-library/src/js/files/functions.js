@@ -421,9 +421,14 @@ export function menuInit() {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
 			}
+			if (!e.target.closest('.menu__body') && !e.target.closest('.icon-menu') && !e.target.closest('.action--header__login')) {
+				menuClose();
+			}
 		});
 	};
 }
+
+
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add("menu-open");
@@ -434,6 +439,13 @@ export function menuClose() {
 	document.documentElement.classList.remove("menu-open");
 	
 }
+const links = document.querySelectorAll(".menu__item a");
+
+links.forEach(link => {
+	link.addEventListener('click', menuClose);
+});
+
+
 // Модуль "показати ще" =======================================================================================================================================================================================================================
 /*
 Документація по роботі у шаблоні: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html

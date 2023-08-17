@@ -55,32 +55,38 @@
 		@media (max-width: 1030px)  {
 			background-color: #0C0C0E;
 			position: fixed;
-			width: 100%;
-			height: 100%;
+			// width: 43.3%;
+			width: 332px;
+			height: 71%;
 			overflow: auto;
 			top: 0;
-			left: -100%;
-			transition: left 0.5s linear 0s;
+			right: -100%;
+			transition: right 0.5s linear 0s;
 			padding-right: rem(0);
 			align-items: stretch;
 			z-index: 100;
 			&::before{
 				content: '';
 				position: fixed;
-				width: 100%;
-				height: rem(90);	
+				// width: 43.3%;
+				width: 332px;
+				height: 90px;	
 				top: 0;
-				left: -100%;
-				transition: left 0.5s linear 0s;
+				right: -100%;
+				transition: right 0.5s linear 0s;
 				z-index: 2;
 				background-color: #0C0C0E;
 			}
 			.menu-open & {
-				left: 0;
+				right: 0;
 				&::before{
-					left: 0;
+					right: 0;
 				}
 			}
+		}
+		@media (max-width: 500px) {
+			width: 100%;
+			height: 100%;
 		}
 	}
 
@@ -90,10 +96,12 @@
 		display: flex;
 		@include adaptiveValue("column-gap", 30, 15);
 		@media (max-width: 1030px) {
-			padding:rem(100) rem(5);
+			padding: 5.8rem 0rem;
 			flex-direction: column;
 			align-items: center;
 			width: 100%;
+			row-gap:30px;
+			margin-right: 6px;
 			}
 		}
 
@@ -102,8 +110,8 @@
 	&__item {
 		@media (max-width: 1030px) {
 			position: relative;
-			left: -100%;
-			transition: left 0.5s ease;
+			right: -100%;
+			transition: right 0.5s ease;
 			top: 0;
 			.menu-open & {
 				@for $i from 1 to 6{
@@ -111,7 +119,7 @@
 						transition-delay: 0.1*$i+s;
 					}
 				}
-					left: 0;
+					right: 0;
 				}
 			}
 	}
@@ -124,6 +132,9 @@
 		line-height: math.div(50,14);
 		letter-spacing: -0.02em;
 		transition: all 0.5s ease;
+		@media (max-width: 1030px) {
+			line-height: 50px;
+			}
 		&:hover{
 			color: #BB945F;
 		}
@@ -174,9 +185,10 @@
 	@media (max-width: 1030px) {
 		display: block;
 		position: relative;
-		width: rem(40);
-		height: rem(20);
+		width: 45px;
+		height: 20px;
 		z-index: 100;
+		transition: width 0.5s linear 0s;
 		@media (any-hover: none) {
 			cursor: default;
 		}
@@ -201,11 +213,18 @@
 			top: calc(50% - rem(1));
 		}
 		.menu-open & {
+			// &.icon-menu{
+				// width: 32px;
+				// height: 32px;
+				// transform: translate(6px);
+				// transition: width 0.5s linear 0s;
+			// }
 			span {
 				width: 0;
 			}
 			&::before,
 			&::after {
+				width: 100%;
 			}
 			&::before {
 				top: calc(50% - rem(1));
