@@ -420,8 +420,9 @@ export function menuInit() {
 			if (bodyLockStatus && e.target.closest('.icon-menu')) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
+				// removeLogIn();
 			}
-			if (!e.target.closest('.menu__body') && !e.target.closest('.icon-menu') && !e.target.closest('.action--header__login')) {
+			if (!e.target.closest('.menu__body') && !e.target.closest('.icon-menu')) {
 				menuClose();
 			}
 		});

@@ -14,9 +14,19 @@
 					</ul>
 				</nav>
 				<div class="menu__action action--header">
-					<a class="action--header__login" href="#">
+					<button class="action--header__login" href="#">
 						<img src="../img/svg/icon_profile.svg" alt="login__icon" class="action--header__icon">
-					</a>
+						<ul class="action--header__profile profile profile--login">
+							<li class="profile__list"><a href="">Profile</a></li>
+							<li class="profile__list"><a class="popup--link" href="#popup--login">Log in</a></li>
+							<li class="profile__list"><a class="register--link" href="#popup--registration">Registre</a></li>
+						</ul>
+						<ul class="action--header__profile profile profile--loggedin">
+							<li class="profile__list"><a href="">Profile</a></li>
+							<li class="profile__list"><a href="">My profile</a></li>
+							<li class="profile__list"><a href="">Log out</a></li>
+						</ul>
+					</button>
 				</div>
 				<button class="menu__icon icon-menu"><span></span></button>
 			</div>

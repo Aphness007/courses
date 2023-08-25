@@ -4,7 +4,7 @@
 // Сніппет (HTML): pl
 
 // Підключення функціоналу "Чортоги Фрілансера"
-import { isMobile, bodyLockStatus, bodyLock, bodyUnlock, bodyLockToggle, FLS } from "../files/functions.js";
+import { bodyLockStatus, bodyLock, bodyUnlock, bodyLockToggle, FLS } from "../files/functions.js";
 import { flsModules } from "../files/modules.js";
 
 // Клас Popup
@@ -310,7 +310,7 @@ class Popup {
 	_getHash() {
 		if (this.options.hashSettings.location) {
 			this.hash = this.targetOpen.selector.includes('#') ?
-				this.targetOpen.selector : this.targetOpen.selector.replace('.', '#')
+				// this.targetOpen.selector : this.targetOpen.selector.replace('.', '#')
 		}
 	}
 	_openToHash() {
