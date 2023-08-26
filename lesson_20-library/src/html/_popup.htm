@@ -1,29 +1,19 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div> -->
 
 <div id="popup--login" aria-hidden="true" class="popup popup--1 login">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<button class="popup__close popup--close"></button>
 			<div class="popup__title"><h2>Login</h2></div>
-			<form action="" class="popup__form form-login">
-				<div class="popup__line">
+			<form action="" id="loginForm" class="popup__form form">
+				<div class="popup__line formGroup">
 					<label for="login-email" class="popup__label">E-mail or readers card</label>
-					<input type="text" id="login-email" class="popup__input" >
-					<div class="popup__error hidden"></div>
+					<input type="text" id="login-email" class="popup__input" required>
+					<div class="popup__error"></div>
 				</div>
-				<div class="popup__line">
+				<div class="popup__line formGroup">
 					<label for="login-password" class="popup__label">Password</label>
-					<input type="password" id="login-password" class="popup__input" >
-					<div class="popup__error hidden"></div>
+					<input type="password" id="login-password" class="popup__input" required minlength="8">
+					<div class="popup__error"></div>
 				</div>
 				<div class="popup__line">
 					<button class="popup__button button common-button" type="submit">Log in</button>
@@ -41,22 +31,26 @@
 		<div class="popup__content">
 			<button class="popup__close popup--close"></button>
 			<div class="popup__title"><h2>Register</h2></div>
-			<form action="" class="popup__form form-register">
-				<div class="popup__line line-register">
+			<form action="" id="registrationForm" class="popup__form form">
+				<div class="popup__line formGroup">
 					<label for="register-first_name" class="popup__label">First name</label>
-					<input type="text" id="register-first_name" class="popup__input" required>
+					<input type="text" id="register-first_name" class="popup__input" required minlength="2">
+					<div class="popup__error"></div>
 				</div>
-				<div class="popup__line line-register">
+				<div class="popup__line formGroup">
 					<label for="register-last_name" class="popup__label">Last name</label>
-					<input type="text" id="register-last_name" class="popup__input" required>
+					<input type="text" id="register-last_name" class="popup__input" required minlength="2">
+					<div class="popup__error"></div>
 				</div>
-				<div class="popup__line">
-					<label for="register-email" class="popup__label">E-mail</label>
-					<input type="text" id="register-email" class="popup__input" required>
+				<div class="popup__line formGroup">
+					<label for="register-email " class="popup__label">E-mail</label>
+					<input type="text" id="register-email" class="popup__input" required pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+					<div class="popup__error"></div>
 				</div>
-				<div class="popup__line">
+				<div class="popup__line formGroup">
 					<label for="register-password" class="popup__label">Password</label>
-					<input type="password" id="register-password" class="popup__input" required>
+					<input type="password" id="register-password" class="popup__input" required minlength="8">
+					<div class="popup__error"></div>
 				</div>
 				<div class="popup__line">
 					<button class="popup__button button common-button" type="submit">Log in</button>

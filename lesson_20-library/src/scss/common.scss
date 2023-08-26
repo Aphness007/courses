@@ -1264,13 +1264,6 @@ text-transform: capitalize;
 		// .popup--login__line
 
 		&__line {
-            &.error input{
-                border: 1px solid red;
-            }
-            &.success input{
-                border: 1px solid #9bd692;
-            }
-
             position: relative;
             display: block;
             transform: translate(0, 0);
@@ -1309,6 +1302,12 @@ text-transform: capitalize;
 		// .popup--login__input
 
 		&__input {
+            &.error{
+                border: 1px solid red;
+            }
+            &.success{
+                border: 1px solid #9bd692;
+            }
 			width: 200px;
 			height: 20px;
 			border: 1px solid #BB945F;
@@ -1320,15 +1319,15 @@ text-transform: capitalize;
 		}
         &__error{
             color: red;
-            transform: scale(1);
-            height: auto;
+            // transform: scale(1);
+            // height: auto;
             font-size: 0.75rem;
 
-            &.hidden{
-            transform: scale(0);
-            transition: all 0.5s ease;
-            height: 0px;
-        }
+            // &.hidden{
+            // transform: scale(0);
+            // transition: all 0.5s ease;
+            // height: 0px;
+
         }
 		// .popup--login__button
 

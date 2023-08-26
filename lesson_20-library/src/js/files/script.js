@@ -199,10 +199,6 @@ function menuLogin() {
   }
 }
 menuLogin();
-// document.addEventListener('click', function(e) {
-//   let targetEvent = e.target;
-//       console.log(targetEvent)
-// });
 
 function toggleLogIn() {
   logIn.classList.toggle('activate');
@@ -211,12 +207,6 @@ function removeLogIn() {
   logIn.classList.remove('activate');
 }
 
-function toggleLoggedIn() {
-  loggedIn.classList.toggle('activate');
-}
-function removeLoggedIn() {
-  loggedIn.classList.remove('activate');
-}
 
 // POPUPS MENU
 
@@ -299,87 +289,83 @@ setTimeout(function () { unlock = true;}, timeout); // Захист від по�
  
 // CLIENT SIDE FORM VALIDATION
 
-const form = document.querySelector(".form-login");
-const email = document.getElementById("login-email");
-const password = document.getElementById("login-password");
+const validateForm = formSelector => {
+  const formElement = document.querySelector(formSelector);
+  
+  const validationOptions = [
+    {
+      attribute: 'minlength',
+      isValid: input => input.value && input.value.length >= parseInt(input.minLength),
+      errorMessage: (input, label) => `${label.textContent} needs to be at least ${parseInt(input.minLength)} characters`,
+    },
+    {
+      attribute: 'required',
+      isValid: input => input.value.trim() !== '' ,
+      errorMessage: (input, label) => `${label.textContent} is required`,
+    },
+    {
+      attribute: 'pattern',
+      isValid: input => {
+        const regExression = new RegExp(input.pattern); 
+        return regExression.test(input.value);
+      },
+      errorMessage: (input, label) => `Not a valid ${label.textContent}`,
+    }
+  ]
+  
+  const validateSingleFormGroup = formGroup => {
 
-const registerEmail = document.getElementById(".register-email");
-const registerPassword = document.getElementById(".register-password");
-const registerName = document.getElementById(".register-first-name");
-const registerLastName = document.getElementById(".register-last-name");
-
-// const error = document.querySelector(".popup__error");
-const input = document.querySelectorAll("input");
-
-input.forEach((item) => {
-  item.addEventListener('click', e => {
-    const element = item.getAttribute('id').split('-')[1];
-    if(item.parentElement.classList.contains("error")){
-      if(element === "email"){
-        setSuccess(email);
-      } else{
-        setSuccess(password);
+    const label = formGroup.querySelector('label');
+    const input = formGroup.querySelector('input');
+    const error = formGroup.querySelector('.popup__error');
+  
+    let checkGroupError = false;
+    
+    for(const option of validationOptions){
+      if(input.hasAttribute(option.attribute) && !option.isValid(input)){
+        error.textContent = option.errorMessage(input, label);
+        input.classList.remove('success');
+        input.classList.add('error');
+        checkGroupError = true;
       }
     }
-});
-});
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  validateValues();
-});
-
-
-function validateValues(){
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-
-  if(emailValue === ''){
-    setError(email, "Email address is required");
-    } else if(!emailValidation(emailValue)){
-      setError(email, "Please provide a valid email address");
-    } else {
-      setSuccess(email);
+    if(!checkGroupError){
+      error.textContent = '';
+      input.classList.remove('error');
+      input.classList.add('success');
     }
+    return !checkGroupError;
+  }
 
-    if(passwordValue === ''){ 
-      setError(password, "Password is required");
-    } else if(passwordValue.length < 8){
-      setError(password, "Password should be at least 8 characters");
-    } else{
-      setSuccess(password);
+  formElement.setAttribute('novalidate', '');
+  
+  Array.from(formElement.elements).forEach( element => {
+    element.addEventListener('blur', e => {
+      validateFormGroups(e.srcElement.parentElement.parentElement);
+    });
+  }) 
+
+  formElement.addEventListener('submit', (e) => {
+    
+    const formValid = validateFormGroups(formElement);
+    if (!formValid){
+      e.preventDefault();
     }
-}
+   
+  });
+  
+  const validateFormGroups = formToValidate => {
+    const formGroups = Array.from(formToValidate.querySelectorAll('.formGroup'));
+   
+    return formGroups.every(formGroup => {
+      validateSingleFormGroup(formGroup);
+    })
+  }
 
-const setError = (element, message) => {
-  const popupLine = element.parentElement;
-  const displayError = popupLine.querySelector(".popup__error");
-
-  displayError.innerHTML = message;
-  displayError.classList.remove('hidden')
-  popupLine.classList.add("error");
-  popupLine.classList.remove("succes");
-}
-const setSuccess = (element) => {
-
-  const popupLine = element.parentElement;
-  const displayError = popupLine.querySelector(".popup__error");
-  console.log(displayError);
-
-  displayError.innerHTML = '';
-  displayError.classList.add('hidden')
-  popupLine.classList.remove("error");
-  popupLine.classList.add("succes");
-}
-
-const emailValidation = email => {
-  const regExression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regExression.test(String(email).toLocaleLowerCase);
-}
-
-
-
-
+} 
+  validateForm('#loginForm');
+  validateForm('#registrationForm');
 
 // FORM VALIDATION
 // document.addEventListener('click', e => {
