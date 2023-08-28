@@ -207,12 +207,20 @@ function removeLogIn() {
   logIn.classList.remove('activate');
 }
 
+function toggleLoggedIn() {
+  loggedIn.classList.toggle('activate');
+}
+function removeLoggedIn() {
+  loggedIn.classList.remove('activate');
+}
 
 // POPUPS MENU
 
 const popupLinks = document.querySelectorAll(".popup--link");
 const registerLinks = document.querySelectorAll(".register--link");
 const popupClose = document.querySelectorAll(".popup--close");
+
+// const userState = { userLoggedIn: false };
 
 const timeout = 500;
 let unlock = true;
@@ -287,9 +295,11 @@ document.addEventListener('keydown', e => {
 unlock = false;
 setTimeout(function () { unlock = true;}, timeout); // Захист від подвійного кліку
  
+
 // CLIENT SIDE FORM VALIDATION
 
 const validateForm = formSelector => {
+  return new Promise((resolve, reject) => {
   const formElement = document.querySelector(formSelector);
   
   const validationOptions = [
@@ -347,10 +357,11 @@ const validateForm = formSelector => {
   }) 
 
   formElement.addEventListener('submit', (e) => {
-    
+    e.preventDefault();
     const formValid = validateFormGroups(formElement);
-    if (!formValid){
-      e.preventDefault();
+    if(formValid){
+      console.log('form is valid')
+      resolve(formElement);
     }
    
   });
@@ -358,14 +369,50 @@ const validateForm = formSelector => {
   const validateFormGroups = formToValidate => {
     const formGroups = Array.from(formToValidate.querySelectorAll('.formGroup'));
    
-    return formGroups.every(formGroup => {
-      validateSingleFormGroup(formGroup);
-    })
+    return formGroups.every(formGroup => validateSingleFormGroup(formGroup));
   }
-
+});
 } 
-  validateForm('#loginForm');
-  validateForm('#registrationForm');
+
+  let userState = false; // Initialize userLoggedIn as false
+  let userInitials;
+  let cardNumber;
+
+  const sendToLocalStorage = (formSelector) => {
+    const formObject = Array.from(formSelector.elements).reduce((accumulator, element) => ({...accumulator, [element.id]: element.value}), {});
+    formObject.cardNumber = Math.floor(Math.random() * 1000000000);
+    userInitials = formObject['register-first_name'].slice(0,1) + formObject['register-last_name'].slice(0,1);
+    cardNumber = formObject.cardNumber; 
+    
+    localStorage.setItem('user', JSON.stringify(formObject)); // Save users data to localStorage
+
+    return  userState = !userState; // Change userLoggedIn to true
+  }
+  const changeIcon = () => {};
+
+console.log(userInitials);
+
+  validateForm('#registrationForm')
+  .then(formElement => {
+    sendToLocalStorage(formElement);
+  })
+  .then(() => {
+      changeIcon();
+  })
+  // .then(() => {
+  //   closePopup(e.target.closest('.popup'))
+  // })
+
+
+
+  // set const login to true
+  // get CardNumber and First letters of user name
+  // change user icon and cardNumber
+  // change login to logout form on icon click
+  // close register popup
+
+
+  
 
 // FORM VALIDATION
 // document.addEventListener('click', e => {
