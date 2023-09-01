@@ -170,18 +170,44 @@ function updateArrow() {
     }
   });
 } 
+let userState = false; // Initialize userLoggedIn as false
+let userInitials;
+const profileIcon = document.querySelector(".action--header__login > img");
+const profileIcon2 = document.querySelector(".action--header__login > span");
+
+
+const changeProfileIcon = (userState) => {
+  
+  if(userState){
+    profileIcon.classList.toggle('loggedIn');
+    profileIcon2.classList.toggle('loggedIn');
+
+    profileIcon2.classList.contains('loggedIn') ? profileIcon2.textContent = userInitials : profileIcon2.textContent = '';    
+  }
+  console.log(userState)
+};
 
 // SCROLL
 
+
+if(localStorage.length !== 0){
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    // const storedUserState = storedUser ? storedUser.userState : console.log(false);
+
+// Initialize userState based on stored value
+    userState = storedUser.userState;
+    userInitials = storedUser.userInitials;
+
+    changeProfileIcon();
+}
 // Authorisation menu
 
-const profileIcon = document.querySelector(".action--header__login > img");
-const profileMenu = document.querySelector(".profile");
+// const profileMenu = document.querySelector(".profile");
 const logIn = document.querySelector(".profile--login");
 const loggedIn = document.querySelector(".profile--loggedin");
 
 function menuLogin() {
-  if (profileIcon) {
+  if (!profileIcon.classList.contains('loggedIn')) { 
     profileIcon.addEventListener('click', function(e) {
       if (e.target.closest(".action--header__login > img")) {
         toggleLogIn();
@@ -189,14 +215,21 @@ function menuLogin() {
     });
 
     // Listen for clicks outside of the profile icon and profile lists
-    document.addEventListener('click', function(e) {
-      // const isProfileIcon = e.target.closest(".action--header__login > img");
-      // const isProfileList = e.target.closest(".action--header__profile");
-      if (!e.target.closest(".action--header__login > img") && !e.target.closest(".action--header__profile")) {
-        removeLogIn();
-    }
+  
+  }
+  else if (profileIcon.classList.contains('loggedIn')) { 
+    profileIcon2.addEventListener('click', function(e) {
+      if (e.target.closest(".action--header__login > span")) {
+        toggleLoggedIn();
+      }
     });
   }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest(".action--header__login > img") && !e.target.closest(".action--header__profile") && !e.target.closest(".action--header__login > span")) {
+        removeLogIn();
+        removeLoggedIn();
+    }
+    });
 }
 menuLogin();
 
@@ -374,30 +407,25 @@ const validateForm = formSelector => {
 });
 } 
 
-  let userState = false; // Initialize userLoggedIn as false
-  let userInitials;
-  let cardNumber;
-
   const sendToLocalStorage = (formSelector) => {
     const formObject = Array.from(formSelector.elements).reduce((accumulator, element) => ({...accumulator, [element.id]: element.value}), {});
     formObject.cardNumber = Math.floor(Math.random() * 1000000000);
-    userInitials = formObject['register-first_name'].slice(0,1) + formObject['register-last_name'].slice(0,1);
-    cardNumber = formObject.cardNumber; 
+    userInitials = (formObject['register-first_name'].slice(0,1) + formObject['register-last_name'].slice(0,1)).toUpperCase();
+    userState = true;
+    formObject.userState = userState;
+    formObject.userInitials = userInitials;
+    // cardNumber = formObject.cardNumber; 
     
     localStorage.setItem('user', JSON.stringify(formObject)); // Save users data to localStorage
-
-    return  userState = !userState; // Change userLoggedIn to true
+    return userState; // Change userLoggedIn to true
   }
-  const changeIcon = () => {};
-
-console.log(userInitials);
 
   validateForm('#registrationForm')
   .then(formElement => {
     sendToLocalStorage(formElement);
   })
   .then(() => {
-      changeIcon();
+    changeProfileIcon();
   })
   // .then(() => {
   //   closePopup(e.target.closest('.popup'))
